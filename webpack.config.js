@@ -1,5 +1,4 @@
 // webpack v4
-
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,7 +8,9 @@ const htmlPlugin = new HtmlWebpackPlugin({
   filename: 'index.html',
 });
 
-module.exports = {
+const extractTextPlugin = new ExtractTextPlugin({ filename: 'style.css' });
+
+const config = {
   entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -18,13 +19,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
@@ -32,11 +26,19 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
           use: ['css-loader'],
+          fallback: 'style-loader',
         }),
+      },
+      {
+        test: /\.(jpg|png|gif)$/,
+        use: {
+          loader: 'url-loader',
+        },
       },
     ],
   },
-  plugins: [new ExtractTextPlugin({ filename: 'style.css' }), htmlPlugin],
+  plugins: [extractTextPlugin, htmlPlugin],
 };
+
+module.exports = config;
