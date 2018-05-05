@@ -1,9 +1,12 @@
 import React from 'react';
 
+import Banner from '../Banner/Banner';
+import './app.css';
+
 export default function App() {
   return (
-    <div>
-      <h1>Top level component</h1>
+    <div className='app'>
+      <Banner />
     </div>
   );
 }
