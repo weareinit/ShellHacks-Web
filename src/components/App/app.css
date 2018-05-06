@@ -2,9 +2,10 @@
   display: grid;
   min-height: 100vh;
   min-width: 100%;
-  grid-template-rows: 1fr 90px;
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas:
-    'header'
+    'nav'
+    'banner'
     'footer';
 }
