@@ -1,5 +1,6 @@
 .banner {
   background: url('../../assets/lance-asper-188744-unsplash.jpg') center;
   background-size: cover;
-  grid-area: 'header';
+  grid-area: 'banner';
+  height: 100vh;
 }
