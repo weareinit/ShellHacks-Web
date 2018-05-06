@@ -1,0 +1,9 @@
+.navbar {
+    grid-area: 'nav';
+    background-color: #FF9EE5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    float: left;
+    padding-left: 25px;
+}
