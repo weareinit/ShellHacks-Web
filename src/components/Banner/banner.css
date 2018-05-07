@@ -4,3 +4,10 @@
   grid-area: 'banner';
   height: 100vh;
 }
+.title{
+	
+	text-align: center;
+	position: relative;
+	top: 350px;
+	font-size: 30px;
+}
