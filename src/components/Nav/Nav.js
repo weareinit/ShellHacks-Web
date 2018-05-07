@@ -4,10 +4,11 @@ import './nav.css';
 
 export default function Nav() {
   return (
-    <div className="navbar">
-      <a>About</a>
-      <a>Schedule</a>
-      <a>Sponsors</a>
-    </div>
+    <ul className="navbar">
+      <li class="shellhacks-nav-logo">ShellHacks</li>
+      <li className="navbar-item">About</li>
+      <li className="navbar-item">Schedule</li>
+      <li className="navbar-item">Sponsors</li>
+    </ul>
   );
 }

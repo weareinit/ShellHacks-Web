@@ -1,9 +1,40 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .navbar {
     grid-area: 'nav';
     background-color: #FF9EE5;
-    height: 40px;
+    border: 1px solid #8ff0fd;
+    color: #be41ae;
+    height: 3em;
     display: flex;
     align-items: center;
-    float: left;
-    padding-left: 25px;
+    padding: 0px 10px;
+    /* border-radius: 5px; */
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.shellhacks-nav-logo {
+    border: 1px solid black;
+    font-size: 24pt;
+}
+
+.navbar li:first-child {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.navbar-item {
+    width: 10em;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    text-align: center;
+    font-size: 14pt;
 }
