@@ -12,6 +12,7 @@ export default function App() {
     <div className='app'>
       <Nav />
       <Banner />
+      <div className='about-background' />
       <About />
       <Footer />
     </div>
