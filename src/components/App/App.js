@@ -4,6 +4,8 @@ import Banner from '../Banner/Banner';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';
 import About from '../About/About';
+import Events from '../Events/Events';
+import Sponsors from '../Sponsors/Sponsors';
 
 import './app.css';
 
@@ -14,6 +16,8 @@ export default function App() {
       <Banner />
       <div className='about-background' />
       <About />
+      <Events />
+      <Sponsors />
       <Footer />
     </div>
   );
