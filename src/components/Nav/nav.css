@@ -5,7 +5,7 @@ ul {
 }
 
 .navbar {
-    grid-area: 'nav';
+    grid-area: nav;
     background-color: #FF9EE5;
     border: 1px solid #8ff0fd;
     color: #be41ae;

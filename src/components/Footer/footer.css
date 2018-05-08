@@ -1,5 +1,5 @@
 .footer {
-    grid-area: 'footer';
+    grid-area: footer;
     background-color: #76F3F1;
     height: 40px;
     display: flex;
