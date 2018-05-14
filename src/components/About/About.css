@@ -1,3 +1,7 @@
 body{
 	background-color:#FF9EE5;
 }
+
+.about {
+	grid-area: about;
+}
