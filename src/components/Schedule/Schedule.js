@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './Events.css';
+import './schedule.css';
 
-export default function Events() {
+export default function Schedule() {
   return (
-    <div className="events" >
-    <h1>Events</h1>
+    <div className="schedule" >
+    <h1>Schedule</h1>
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Cras auctor tempus metus, non dignissim enim blandit a. Aenean
     sollicitudin turpis et enim vehicula eleifend. Sed non ipsum leo.
