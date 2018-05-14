@@ -1,3 +1,20 @@
-.sponsors {
+.sponsors-container {
     grid-area: sponsors;
+    background-color: #ff9ee5;
+    display: grid;
+    grid-template-columns: var(--container-columns-small);
+    grid-template-rows: 1fr;
+}
+
+.sponsors-content {
+    grid-column: 2 / 3;
+}
+
+@media only screen and (min-width: 1044px) {
+    .sponsors-container {
+        grid-template-columns: var(--container-columns-large);
+    }
+    .sponsors-content {
+        grid-column: 3 / 4;
+    }
 }

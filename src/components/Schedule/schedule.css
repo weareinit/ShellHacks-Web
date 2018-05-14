@@ -1,3 +1,21 @@
-.schedule{
+.schedule-container{
 	grid-area: schedule;
+	background-color: #76f3f1;
+	display: grid;
+	grid-template-columns: var(--container-columns-small);
+	grid-template-rows: 1fr;
+}
+
+.schedule-content {
+	grid-column: 2 / 3;
+}
+
+@media only screen and (min-width: 1044px) {
+	.schedule-container {
+		grid-template-columns: var(--container-columns-large);
+	}
+
+	.schedule-content {
+		grid-column: 3 / 4;
+	}
 }

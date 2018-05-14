@@ -48,7 +48,7 @@ ul {
   font-size: 24pt;
   align-self: center;
   margin-right: auto;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 var(--base-gutter-size);
 }
 
 nav a {
@@ -68,7 +68,7 @@ nav a {
   .navbar {
     display: flex;
     align-items: stretch;
-    padding: 0 10px 0 0;
+    padding: 0 var(--base-gutter-size) 0 0;
   }
   .logo {
     display: inherit;

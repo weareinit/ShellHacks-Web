@@ -14,11 +14,8 @@ export default function App() {
     <div className='app'>
       <Nav />
       <Banner />
-      <div className='about-background' />
       <About />
-      <div className='schedule-background' />
       <Schedule />
-      <div className='sponsors-background' />
       <Sponsors />
       <Footer />
     </div>

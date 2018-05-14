@@ -18,43 +18,8 @@ html,body {
     'footer';
 }
 
-.about-background {
-	background: url('../../assets/lance-asper-188744-unsplash.jpg') center;
-	grid-column: 1 / 2;
-	grid-row: 3;
-}
-
-.schedule-background {
-  background-color: #76f3f1;
-  grid-column: 1 /2;
-  grid-row: 4;
-}
-
-.sponsors-background {
-  background-color: #ff9ee5;
-  grid-column: 1 / 2;
-  grid-row: 5;
-}
-
-@media only screen and (min-width: 1024px){
-  .app {
-    grid-template-columns: 1fr 1024px 1fr;
-    grid-template-areas:
-      'nav nav nav'
-      'banner banner banner'
-      '. about .'
-      '. schedule .'
-      '. sponsors .'
-      'footer footer footer';
-  }
-
-  .about-background {
-    grid-column: 1 / 4;
-  }
-  .schedule-background {
-    grid-column: 1 /4;
-  }
-  .sponsors-background {
-    grid-column: 1 / 4;
-  }
+:root {
+  --base-gutter-size: 10px;
+  --container-columns-small: var(--base-gutter-size) 1fr var(--base-gutter-size);
+  --container-columns-large: var(--base-gutter-size) 1fr 1024px 1fr var(--base-gutter-size);
 }
