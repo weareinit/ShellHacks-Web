@@ -22,15 +22,14 @@ html,body {
 	grid-row: 3;
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 1024px){
   .app {
-    grid-template-columns: calc(10px + 2*2vw) 1fr calc(10px + 2*2vw);
+    grid-template-columns: 1fr 1024px 1fr;
     grid-template-areas:
       'nav nav nav'
-      '. banner .'
+      'banner banner banner'
       '. about .'
       'footer footer footer';
-    grid-row-gap: .5em;
   }
 
   .about-background {
