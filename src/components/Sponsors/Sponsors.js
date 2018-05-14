@@ -4,7 +4,7 @@ import './sponsors.css';
 
 export default function Sponsors() {
   return (
-    <div >
+    <div className='sponsors'>
     <h1>Sponsors</h1>
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Cras auctor tempus metus, non dignissim enim blandit a. Aenean
