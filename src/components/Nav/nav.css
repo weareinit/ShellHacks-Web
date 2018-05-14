@@ -1,47 +1,82 @@
+nav {
+  grid-area: nav;
+  z-index: 100;
+  background-color: whitesmoke;
+  color: #be41ae;
+  height: 4em;
+  display: flex;
+  align-items: stretch;
+}
+
 ul {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
-
 .navbar {
-  grid-area: nav;
-  background-color: #ff9ee5;
-  border: 1px solid #8ff0fd;
-  color: #be41ae;
-  height: 3em;
-  display: flex;
-  align-items: center;
-  padding: 0px 10px;
+  border: 1px solid black;
+  margin: 0;
 }
 
+@media only screen and (max-width: 479px){
+  .navbar {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    background-color: whitesmoke;
+  }
+}
+
+/* nav bar item rules */
 .navbar li {
   cursor: pointer;
-  border: 1px solid black;
 }
-
-.navbar li:first-child {
-    margin-right: .5em;
-}
-
 .navbar-item {
+  border: 1px solid black;
   width: 5em;
-  border-radius: 5px;
-  margin: 1em;
   text-align: center;
   font-size: 14pt;
+  line-height: 3.2em;
+}
+.navbar a {
+  color: #be41ae;
 }
 
-.shellhacks-nav-logo {
+.logo {
+  display: none;
   font-size: 24pt;
+  align-self: center;
+  margin-right: auto;
+  padding: 0 0 0 10px;
 }
 
-@media only screen and (min-width: 900px) {
-  .navbar {
+nav a {
+  text-decoration: none;
+  color: #f37de3;
+}
+
+.burger-button {
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 480px) {
+  nav {
+    justify-content: center;
     padding: 0px 0px;
   }
-
-  .navbar li:first-child {
-    margin-left: calc(10px + 2 * 2vw);
+  .navbar {
+    display: flex;
+    align-items: stretch;
+    padding: 0 10px 0 0;
+  }
+  .logo {
+    display: inherit;
+  }
+  .burger-button {
+    display: none;
+  }
+  .menu-close-button {
+    display: none;
   }
 }
