@@ -13,6 +13,8 @@ html,body {
     'nav'
     'banner'
     'about'
+    'schedule'
+    'sponsors'
     'footer';
 }
 
@@ -22,6 +24,18 @@ html,body {
 	grid-row: 3;
 }
 
+.schedule-background {
+  background-color: #76f3f1;
+  grid-column: 1 /2;
+  grid-row: 4;
+}
+
+.sponsors-background {
+  background-color: #ff9ee5;
+  grid-column: 1 / 2;
+  grid-row: 5;
+}
+
 @media only screen and (min-width: 1024px){
   .app {
     grid-template-columns: 1fr 1024px 1fr;
@@ -29,10 +43,18 @@ html,body {
       'nav nav nav'
       'banner banner banner'
       '. about .'
+      '. schedule .'
+      '. sponsors .'
       'footer footer footer';
   }
 
   .about-background {
+    grid-column: 1 / 4;
+  }
+  .schedule-background {
+    grid-column: 1 /4;
+  }
+  .sponsors-background {
     grid-column: 1 / 4;
   }
 }
