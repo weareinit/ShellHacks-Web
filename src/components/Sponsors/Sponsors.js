@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './about.css';
+import './sponsors.css';
 
-export default function About() {
+export default function Sponsors() {
   return (
-    <div className='about-container'>
-    <div className='about-content'>
-      <h1>About</h1>
+    <div className='sponsors-container'>
+    <div className='sponsors-content'>
+      <h1>Sponsors</h1>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Cras auctor tempus metus, non dignissim enim blandit a. Aenean
       sollicitudin turpis et enim vehicula eleifend. Sed non ipsum leo.

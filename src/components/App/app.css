@@ -12,5 +12,14 @@ html,body {
   grid-template-areas:
     'nav'
     'banner'
+    'about'
+    'schedule'
+    'sponsors'
     'footer';
+}
+
+:root {
+  --base-gutter-size: 10px;
+  --container-columns-small: var(--base-gutter-size) 1fr var(--base-gutter-size);
+  --container-columns-large: var(--base-gutter-size) 1fr 1024px 1fr var(--base-gutter-size);
 }
