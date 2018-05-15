@@ -10,28 +10,36 @@ nav {
 
 ul {
   list-style: none;
-}
-.navbar {
-  border: 1px solid black;
   margin: 0;
+  padding: 0;
 }
 
-@media only screen and (max-width: 479px){
+.navbar {
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 479px) {
   .navbar {
+    position: absolute;
     display: none;
     flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    padding: 0;
-    width: 100%;
-    background-color: whitesmoke;
+    align-items: center;
+    margin: auto 0;
+    width: 95vw;
+    height: 100%;
+    background-color: rgb(158, 236, 255);
+  }
+  .navbar-item:first-child {
+    margin-top: auto;
   }
 }
 
 /* nav bar item rules */
+
 .navbar li {
   cursor: pointer;
 }
+
 .navbar-item {
   border: 1px solid black;
   width: 5em;
@@ -39,6 +47,7 @@ ul {
   font-size: 14pt;
   line-height: 3.2em;
 }
+
 .navbar a {
   color: #be41ae;
 }
@@ -58,6 +67,11 @@ nav a {
 
 .burger-button {
   margin-right: auto;
+}
+
+.menu-close-button {
+  background-color: none;
+  margin: auto 0 50px 0;
 }
 
 @media only screen and (min-width: 480px) {
