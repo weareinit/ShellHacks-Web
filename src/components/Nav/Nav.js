@@ -1,38 +1,49 @@
 import React from 'react';
 
+import NavWide from './NavWide/NavWide';
+import NavNarrow from './NavNarrow/NavNarrow';
 import './nav.css';
 
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isWideScreen: true, // if is widescreen, show widenav else show narrownav
       isToggled: false,
-      isWideScreen: true,
+      menuItems: [
+        {
+          text: 'About',
+          link: '#',
+        },
+        {
+          text: 'Schedule',
+          link: '#',
+        },
+        {
+          text: 'FAQ',
+          link: '#',
+        },
+        {
+          text: 'Sponsors',
+          link: '#',
+        },
+      ],
     };
-    this.toggleBurger = this.toggleBurger.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.toggleBurger = this.toggleBurger.bind(this);
   }
 
   toggleBurger() {
-    const menuItems = document.querySelector('.navbar');
-    if (this.state.isToggled) {
-      menuItems.style.display = 'none';
-    } else {
-      menuItems.style.display = 'flex';
-    }
     this.setState(prevState => ({ isToggled: !prevState.isToggled }));
   }
 
   handleResize() {
-    const menu = document.querySelector('.navbar');
     if (window.innerWidth >= 480) {
       if (!this.state.isWideScreen) {
-        menu.style.display = 'flex';
         this.setState(prevState => ({ isWideScreen: !prevState.isWideScreen, isToggled: false }));
       }
     } else if (window.innerWidth < 480) {
       if (this.state.isWideScreen) {
-        menu.style.display = 'none';
         this.setState(prevState => ({ isWideScreen: !prevState.isWideScreen, isToggled: false }));
       }
     }
@@ -43,17 +54,22 @@ export default class Nav extends React.Component {
     window.addEventListener('resize', this.handleResize);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
   render() {
     return (
       <nav>
-      <a href="" className="logo">ShellHacks</a>
-      <button className='burger-button' onClick={this.toggleBurger}><i className='fa fa-bars fa-2x'></i></button>
-      <ul className="navbar">
-        <li className='navbar-item'><a href="#">About</a></li>
-        <li className='navbar-item'><a href="#">Schedule</a></li>
-        <li className='navbar-item'><a href="#">Sponsors</a></li>
-        <button className='menu-close-button' onClick={this.toggleBurger}>X</button>
-      </ul>
+        {
+          (() => {
+            if (this.state.isWideScreen) {
+              return <NavWide children={this.state.menuItems}/>;
+            }
+            return <NavNarrow children={this.state.menuItems} toggle={this.toggleBurger}
+              isToggled={this.state.isToggled}/>;
+          })()
+        }
       </nav>
     );
   }

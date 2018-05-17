@@ -1,0 +1,23 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.navbar-items {
+  display: flex;
+}
+
+.logo {
+  display: none;
+  font-size: 24pt;
+  align-self: center;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 480px) {
+  .logo {
+    display: inherit;
+  }
+}

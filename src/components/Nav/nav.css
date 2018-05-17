@@ -2,20 +2,14 @@ nav {
   grid-area: nav;
   z-index: 100;
   background-color: whitesmoke;
-  color: #be41ae;
   height: 4em;
   display: flex;
-  align-items: stretch;
 }
 
-ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.navbar {
-  border: 1px solid black;
 }
 
 @media only screen and (max-width: 479px) {
@@ -48,30 +42,9 @@ ul {
   line-height: 3.2em;
 }
 
-.navbar a {
-  color: #be41ae;
-}
-
-.logo {
-  display: none;
-  font-size: 24pt;
-  align-self: center;
-  margin-right: auto;
-  padding: 0 0 0 10px;
-}
-
 nav a {
   text-decoration: none;
   color: #f37de3;
-}
-
-.burger-button {
-  margin-right: auto;
-}
-
-.menu-close-button {
-  background-color: none;
-  margin: auto 0 50px 0;
 }
 
 @media only screen and (min-width: 480px) {
