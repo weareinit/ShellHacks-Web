@@ -5,19 +5,20 @@
   padding: 0 10px;
 }
 
-.navbar-items {
-  display: flex;
-}
-
 .logo {
-  display: none;
   font-size: 24pt;
   align-self: center;
   margin-right: auto;
 }
 
-@media only screen and (min-width: 480px) {
-  .logo {
-    display: inherit;
-  }
+.navbar-items {
+  display: flex;
+}
+
+.navbar-item {
+  border: 1px solid black;
+  width: 5em;
+  text-align: center;
+  font-size: 14pt;
+  line-height: 3.2em;
 }
