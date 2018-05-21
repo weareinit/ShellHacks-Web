@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavWide from './NavWide/NavWide';
 import NavNarrow from './NavNarrow/NavNarrow';
+import NavItem from './NavItem/NavItem';
 import './nav.css';
 
 export default class Nav extends React.Component {
@@ -9,11 +10,11 @@ export default class Nav extends React.Component {
     super(props);
     this.state = {
       isWideScreen: true, // if is widescreen, show widenav else show narrownav
-      isToggled: false,
+      isDropdownOpen: false,
       menuItems: [
         {
           text: 'About',
-          link: '#',
+          link: 'hey',
         },
         {
           text: 'Schedule',
@@ -30,21 +31,33 @@ export default class Nav extends React.Component {
       ],
     };
     this.handleResize = this.handleResize.bind(this);
-    this.toggleBurger = this.toggleBurger.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.clickTest = this.clickTest.bind(this);
   }
 
-  toggleBurger() {
-    this.setState(prevState => ({ isToggled: !prevState.isToggled }));
+  toggleDropdown() {
+    this.setState(prevState => ({ isDropdownOpen: !prevState.isDropdownOpen }));
+  }
+
+  closeDropdown() {
+    this.setState({ isDropdownOpen: false });
   }
 
   handleResize() {
     if (window.innerWidth >= 480) {
       if (!this.state.isWideScreen) {
-        this.setState(prevState => ({ isWideScreen: !prevState.isWideScreen, isToggled: false }));
+        this.setState(prevState => ({
+          isWideScreen: !prevState.isWideScreen,
+          isDropdownOpen: false,
+        }));
       }
     } else if (window.innerWidth < 480) {
       if (this.state.isWideScreen) {
-        this.setState(prevState => ({ isWideScreen: !prevState.isWideScreen, isToggled: false }));
+        this.setState(prevState => ({
+          isWideScreen: !prevState.isWideScreen,
+          isDropdownOpen: false,
+        }));
       }
     }
   }
@@ -54,8 +67,29 @@ export default class Nav extends React.Component {
     window.addEventListener('resize', this.handleResize);
   }
 
+  componentDidUpdate(prevState) {
+    if (this.state.isDropdownOpen && prevState.isDropdownOpen) {
+      return;
+    }
+
+    const dropDown = document.querySelector('.dropdown');
+    const dropDownItems = document.querySelector('.dropdown-items');
+    if (this.state.isDropdownOpen && !prevState.isDropdownOpen) {
+      dropDown.addEventListener('click', this.closeDropdown, false);
+      dropDownItems.addEventListener('click', this.clickTest, true);
+    } else if (!this.state.isDropdownOpen && prevState.isDropdownOpen) {
+      dropDown.removeEventListener('click', this.closeDropdown);
+      dropDownItems.removeEventListener('click', this.clickTest);
+    }
+  }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
+  }
+
+  clickTest(e) {
+    console.log(this.state.isDropdownOpen);
+    e.stopPropagation();
   }
 
   render() {
@@ -66,8 +100,13 @@ export default class Nav extends React.Component {
             if (this.state.isWideScreen) {
               return <NavWide children={this.state.menuItems}/>;
             }
-            return <NavNarrow children={this.state.menuItems} toggle={this.toggleBurger}
-              isToggled={this.state.isToggled}/>;
+            return <NavNarrow toggle={this.toggleDropdown}
+              isOpen={this.state.isDropdownOpen}>
+                <div className='dropdown-items'>
+                {this.state.menuItems.map(item => <NavItem linkClick={this.clickTest}
+                key={item.text} {...item}/>)}
+                </div>
+              </NavNarrow>;
           })()
         }
       </nav>

@@ -12,12 +12,14 @@
   background-color: rgb(158, 236, 255);
 }
 
-.dropdown a {
-  padding: 10px 0;
+.dropdown-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
 }
 
-.dropdown a:first-child {
-  margin-top: auto;
+.dropdown-items a {
+  padding: 10px 0;
 }
 
 .burger-button {

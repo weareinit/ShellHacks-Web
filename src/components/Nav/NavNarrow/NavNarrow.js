@@ -9,11 +9,11 @@ const NavNarrow = props =>
   <button className='burger-button' onClick={props.toggle}><i className='fa fa-bars fa-2x'></i></button>
   {
     (() => {
-      if (props.isToggled) {
+      if (props.isOpen) {
         return (
         <div className='dropdown'>
-          {props.children.map(item => <NavItem key={item.text} {...item}/>)}
-          <button className='menu-close-button' onClick={props.toggle}>X</button>
+          {props.children}
+          <button className='menu-close-button'>X</button>
         </div>);
       }
       return null;
