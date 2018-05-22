@@ -74,13 +74,16 @@ export default class Nav extends React.Component {
     }
 
     const dropDown = document.querySelector('.dropdown');
-    const dropDownItems = document.querySelector('.dropdown-items');
+    let dropDownItems = document.querySelector('.navbar-items');
+    if (!this.state.isWideScreen) {
+      dropDownItems = document.querySelector('.dropdown-items');
+    }
     if (this.state.isDropdownOpen && !prevState.isDropdownOpen) {
       dropDown.addEventListener('click', this.closeDropdown, false);
-      dropDownItems.addEventListener('click', this.clickTest, true);
+      dropDownItems.addEventListener('click', this.scrollToWindowPosition, true);
     } else if (!this.state.isDropdownOpen && prevState.isDropdownOpen) {
       dropDown.removeEventListener('click', this.closeDropdown);
-      dropDownItems.removeEventListener('click', this.clickTest);
+      dropDownItems.removeEventListener('click', this.scrollToWindowPosition);
     }
   }
 
@@ -99,20 +102,28 @@ export default class Nav extends React.Component {
   render() {
     return (
       <nav>
-        {
-          (() => {
-            if (this.state.isWideScreen) {
-              return <NavWide children={this.state.menuItems}/>;
-            }
-            return <NavNarrow toggle={this.toggleDropdown}
-              isOpen={this.state.isDropdownOpen}>
-                <div className='dropdown-items'>
-                {this.state.menuItems.map(item => <NavItem linkClick={this.scrollToWindowPosition}
-                key={item.text} {...item}/>)}
-                </div>
-              </NavNarrow>;
-          })()
-        }
+        {(() => {
+          if (this.state.isWideScreen) {
+            return (
+              <NavWide>
+                {this.state.menuItems.map(item =>
+                  <li key={item.text} className='navbar-item'>
+                  <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
+                  </li>)
+                }
+              </NavWide>);
+          }
+          return (
+            <NavNarrow toggle={this.toggleDropdown}
+            isOpen={this.state.isDropdownOpen}>
+              <div className='dropdown-items'>
+              {this.state.menuItems.map(item =>
+                <NavItem linkClick={this.scrollToWindowPosition}
+                key={item.text} {...item}/>)
+              }
+              </div>
+            </NavNarrow>);
+        })()}
       </nav>
     );
   }
