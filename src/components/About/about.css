@@ -1,0 +1,22 @@
+.about-container {
+	grid-area: about;
+	background: url('../../assets/lance-asper-188744-unsplash.jpg') center;
+	background-color: #FF9EE5;
+	display: grid;
+	grid-template-columns: var(--container-columns-small);
+	grid-template-rows: 1fr;
+}
+
+.about-content {
+	grid-column: 2 / 3;
+}
+
+@media only screen and (min-width: 1044px) {
+	.about-container {
+		grid-template-columns: var(--container-columns-large);
+	}
+
+	.about-content {
+		grid-column: 3 / 4;
+	}
+}

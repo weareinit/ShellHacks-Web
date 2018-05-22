@@ -1,0 +1,25 @@
+html,body {
+	margin:0;
+	padding: 0;
+}
+
+.app {
+  display: grid;
+  min-height: 100vh;
+  min-width: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'nav'
+    'banner'
+    'about'
+    'schedule'
+    'sponsors'
+    'footer';
+}
+
+:root {
+  --base-gutter-size: 10px;
+  --container-columns-small: var(--base-gutter-size) 1fr var(--base-gutter-size);
+  --container-columns-large: var(--base-gutter-size) 1fr 1024px 1fr var(--base-gutter-size);
+}

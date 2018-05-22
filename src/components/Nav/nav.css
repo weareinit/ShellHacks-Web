@@ -1,0 +1,22 @@
+nav {
+  grid-area: nav;
+  z-index: 100;
+  background-color: whitesmoke;
+  height: 4em;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f37de3;
+}

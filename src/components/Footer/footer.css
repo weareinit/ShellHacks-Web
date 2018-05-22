@@ -1,0 +1,8 @@
+.footer {
+    grid-area: footer;
+    background-color: #76F3F1;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--base-gutter-size) 0 var(--base-gutter-size);
+}

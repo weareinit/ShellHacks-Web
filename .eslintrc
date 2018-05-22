@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "linebreak-style": "off",
+    "no-unused-vars": "off"
+  },
+  "extends": ["airbnb-base"],
+  "env": {
+    "browser": true
+  }
+}
