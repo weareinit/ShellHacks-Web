@@ -1,0 +1,24 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.logo {
+  font-size: 24pt;
+  align-self: center;
+  margin-right: auto;
+}
+
+.navbar-items {
+  display: flex;
+}
+
+.navbar-item {
+  border: 1px solid black;
+  width: 5em;
+  text-align: center;
+  font-size: 14pt;
+  line-height: 3.2em;
+}

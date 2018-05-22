@@ -4,7 +4,7 @@ import './about.css';
 
 export default function About() {
   return (
-    <div className='about-container'>
+    <div className='about-container' id='about-section'>
     <div className='about-content'>
       <h1>About</h1>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.

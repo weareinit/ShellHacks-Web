@@ -1,39 +1,64 @@
 import React from 'react';
 
+import NavWide from './NavWide/NavWide';
+import NavNarrow from './NavNarrow/NavNarrow';
+import NavItem from './NavItem/NavItem';
 import './nav.css';
 
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isToggled: false,
-      isWideScreen: true,
+      isWideScreen: true, // if is widescreen, show widenav else show narrownav
+      isDropdownOpen: false,
+      windowLocation: '',
+      menuItems: [
+        {
+          text: 'About',
+          link: 'about-section',
+        },
+        {
+          text: 'Schedule',
+          link: 'schedule-section',
+        },
+        {
+          text: 'FAQ',
+          link: '#',
+        },
+        {
+          text: 'Sponsors',
+          link: 'sponsors-section',
+        },
+      ],
     };
-    this.toggleBurger = this.toggleBurger.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.scrollToWindowPosition = this.scrollToWindowPosition.bind(this);
   }
 
-  toggleBurger() {
-    const menuItems = document.querySelector('.navbar');
-    if (this.state.isToggled) {
-      menuItems.style.display = 'none';
-    } else {
-      menuItems.style.display = 'flex';
-    }
-    this.setState(prevState => ({ isToggled: !prevState.isToggled }));
+  toggleDropdown() {
+    this.setState(prevState => ({ isDropdownOpen: !prevState.isDropdownOpen }));
+  }
+
+  closeDropdown() {
+    this.setState({ isDropdownOpen: false });
   }
 
   handleResize() {
-    const menu = document.querySelector('.navbar');
     if (window.innerWidth >= 480) {
       if (!this.state.isWideScreen) {
-        menu.style.display = 'flex';
-        this.setState(prevState => ({ isWideScreen: !prevState.isWideScreen, isToggled: false }));
+        this.setState(prevState => ({
+          isWideScreen: !prevState.isWideScreen,
+          isDropdownOpen: false,
+        }));
       }
     } else if (window.innerWidth < 480) {
       if (this.state.isWideScreen) {
-        menu.style.display = 'none';
-        this.setState(prevState => ({ isWideScreen: !prevState.isWideScreen, isToggled: false }));
+        this.setState(prevState => ({
+          isWideScreen: !prevState.isWideScreen,
+          isDropdownOpen: false,
+        }));
       }
     }
   }
@@ -43,17 +68,62 @@ export default class Nav extends React.Component {
     window.addEventListener('resize', this.handleResize);
   }
 
+  componentDidUpdate(prevState) {
+    if (this.state.isDropdownOpen && prevState.isDropdownOpen) {
+      return;
+    }
+
+    const dropDown = document.querySelector('.dropdown');
+    let dropDownItems = document.querySelector('.navbar-items');
+    if (!this.state.isWideScreen) {
+      dropDownItems = document.querySelector('.dropdown-items');
+    }
+    if (this.state.isDropdownOpen && !prevState.isDropdownOpen) {
+      dropDown.addEventListener('click', this.closeDropdown, false);
+      dropDownItems.addEventListener('click', this.scrollToWindowPosition, true);
+    } else if (!this.state.isDropdownOpen && prevState.isDropdownOpen) {
+      dropDown.removeEventListener('click', this.closeDropdown);
+      dropDownItems.removeEventListener('click', this.scrollToWindowPosition);
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  scrollToWindowPosition(e) {
+    e.preventDefault();
+    const jumpLocation = e.target.attributes[0].nodeValue;
+    this.state.windowLocation = jumpLocation;
+    const anchorElement = document.getElementById(jumpLocation).offsetTop;
+    window.scrollTo(0, anchorElement);
+  }
+
   render() {
     return (
       <nav>
-      <a href="" className="logo">ShellHacks</a>
-      <button className='burger-button' onClick={this.toggleBurger}><i className='fa fa-bars fa-2x'></i></button>
-      <ul className="navbar">
-        <li className='navbar-item'><a href="#">About</a></li>
-        <li className='navbar-item'><a href="#">Schedule</a></li>
-        <li className='navbar-item'><a href="#">Sponsors</a></li>
-        <button className='menu-close-button' onClick={this.toggleBurger}>X</button>
-      </ul>
+        {(() => {
+          if (this.state.isWideScreen) {
+            return (
+              <NavWide>
+                {this.state.menuItems.map(item =>
+                  <li key={item.text} className='navbar-item'>
+                  <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
+                  </li>)
+                }
+              </NavWide>);
+          }
+          return (
+            <NavNarrow toggle={this.toggleDropdown}
+            isOpen={this.state.isDropdownOpen}>
+              <div className='dropdown-items'>
+              {this.state.menuItems.map(item =>
+                <NavItem linkClick={this.scrollToWindowPosition}
+                key={item.text} {...item}/>)
+              }
+              </div>
+            </NavNarrow>);
+        })()}
       </nav>
     );
   }
