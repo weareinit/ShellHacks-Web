@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './sponsors.css';
+import './Sponsors.css';
 
 export default function Sponsors() {
   return (
-    <div className='sponsors-container'>
+    <div className='sponsors-container' id='sponsors-section'>
     <div className='sponsors-content'>
       <h1>Sponsors</h1>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.

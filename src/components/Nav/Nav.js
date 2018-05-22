@@ -19,7 +19,7 @@ export default class Nav extends React.Component {
         },
         {
           text: 'Schedule',
-          link: '#',
+          link: 'schedule-section',
         },
         {
           text: 'FAQ',
@@ -27,7 +27,7 @@ export default class Nav extends React.Component {
         },
         {
           text: 'Sponsors',
-          link: '#',
+          link: 'sponsors-section',
         },
       ],
     };
