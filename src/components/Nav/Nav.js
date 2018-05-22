@@ -11,10 +11,11 @@ export default class Nav extends React.Component {
     this.state = {
       isWideScreen: true, // if is widescreen, show widenav else show narrownav
       isDropdownOpen: false,
+      windowLocation: '',
       menuItems: [
         {
           text: 'About',
-          link: 'hey',
+          link: 'about-section',
         },
         {
           text: 'Schedule',
@@ -33,7 +34,7 @@ export default class Nav extends React.Component {
     this.handleResize = this.handleResize.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
-    this.clickTest = this.clickTest.bind(this);
+    this.scrollToWindowPosition = this.scrollToWindowPosition.bind(this);
   }
 
   toggleDropdown() {
@@ -87,9 +88,12 @@ export default class Nav extends React.Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  clickTest(e) {
-    console.log(this.state.isDropdownOpen);
-    e.stopPropagation();
+  scrollToWindowPosition(e) {
+    e.preventDefault();
+    const jumpLocation = e.target.attributes[0].nodeValue;
+    this.state.windowLocation = jumpLocation;
+    const anchorElement = document.getElementById(jumpLocation).offsetTop;
+    window.scrollTo(0, anchorElement);
   }
 
   render() {
@@ -103,7 +107,7 @@ export default class Nav extends React.Component {
             return <NavNarrow toggle={this.toggleDropdown}
               isOpen={this.state.isDropdownOpen}>
                 <div className='dropdown-items'>
-                {this.state.menuItems.map(item => <NavItem linkClick={this.clickTest}
+                {this.state.menuItems.map(item => <NavItem linkClick={this.scrollToWindowPosition}
                 key={item.text} {...item}/>)}
                 </div>
               </NavNarrow>;
