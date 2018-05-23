@@ -4,6 +4,8 @@ nav {
   background-color: whitesmoke;
   height: 4em;
   display: flex;
+  position: fixed;
+  width: 100%;
 }
 
 nav ul {

@@ -31,10 +31,10 @@ export default class Nav extends React.Component {
         },
       ],
     };
-    this.handleResize = this.handleResize.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.scrollToWindowPosition = this.scrollToWindowPosition.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
   toggleDropdown() {
@@ -43,6 +43,14 @@ export default class Nav extends React.Component {
 
   closeDropdown() {
     this.setState({ isDropdownOpen: false });
+  }
+
+  scrollToWindowPosition(e) {
+    e.preventDefault();
+    const jumpLocation = e.target.attributes[0].nodeValue;
+    this.state.windowLocation = jumpLocation;
+    const anchorElement = document.getElementById(jumpLocation).offsetTop;
+    window.scrollTo(0, anchorElement);
   }
 
   handleResize() {
@@ -64,7 +72,6 @@ export default class Nav extends React.Component {
   }
 
   componentDidMount() {
-    this.handleResize();
     window.addEventListener('resize', this.handleResize);
   }
 
@@ -89,14 +96,6 @@ export default class Nav extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
-  }
-
-  scrollToWindowPosition(e) {
-    e.preventDefault();
-    const jumpLocation = e.target.attributes[0].nodeValue;
-    this.state.windowLocation = jumpLocation;
-    const anchorElement = document.getElementById(jumpLocation).offsetTop;
-    window.scrollTo(0, anchorElement);
   }
 
   render() {
