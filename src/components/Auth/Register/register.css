@@ -5,6 +5,23 @@
   flex-direction: column;
 }
 
+.register-header {
+  text-align: center;
+  margin: 0;
+}
+
 .signup-container {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
   margin: auto;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: pink;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
