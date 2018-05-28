@@ -10,7 +10,7 @@ const NavWide = props =>
       <Link to='/' className="logo">ShellHacks</Link>
       <ul className="navbar-items">
         {props.children}
-        <RegisterLink />
+        <li className='navbar-item'><RegisterLink /></li>
       </ul>
     </div>;
 

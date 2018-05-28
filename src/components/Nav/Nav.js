@@ -119,12 +119,10 @@ export default class Nav extends React.Component {
           return (
             <NavNarrow toggle={this.toggleDropdown}
             isOpen={this.state.isDropdownOpen}>
-              <div className='dropdown-items'>
               {this.state.menuItems.map(item =>
                 <NavItem linkClick={this.scrollToWindowPosition}
                 key={item.text} {...item}/>)
               }
-              </div>
             </NavNarrow>);
         })()}
       </nav>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NavItem from '../NavItem/NavItem';
+import RegisterLink from '../../Auth/Register/RegisterLink';
 
 import './navNarrow.css';
 
@@ -12,7 +13,10 @@ const NavNarrow = props =>
       if (props.isOpen) {
         return (
         <div className='dropdown'>
+          <div className='dropdown-items'>
           {props.children}
+          <RegisterLink />
+          </div>
           <button className='menu-close-button'>X</button>
         </div>);
       }
