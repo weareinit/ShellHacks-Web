@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 import NavItem from '../NavItem/NavItem';
+import RegisterLink from '../../Auth/Register/RegisterLink';
 import './navWide.css';
 
 const NavWide = props =>
     <div className='navbar-container'>
-      <a href="" className="logo">ShellHacks</a>
+      <Link to='/' className="logo">ShellHacks</Link>
       <ul className="navbar-items">
         {props.children}
+        <RegisterLink />
       </ul>
     </div>;
 

@@ -1,0 +1,10 @@
+.register {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100%;
+  flex-direction: column;
+}
+
+.signup-container {
+  margin: auto;
+}

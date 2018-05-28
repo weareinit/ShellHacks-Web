@@ -15,6 +15,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -37,6 +38,9 @@ const config = {
         },
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [extractTextPlugin, htmlPlugin],
 };

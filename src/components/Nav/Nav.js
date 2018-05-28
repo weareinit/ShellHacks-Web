@@ -33,10 +33,6 @@ export default class Nav extends React.Component {
           text: 'Log In',
           link: '#',
         },
-        {
-          text: 'Register',
-          link: '#',
-        },
       ],
     };
     this.toggleDropdown = this.toggleDropdown.bind(this);
