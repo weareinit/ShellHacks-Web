@@ -5,18 +5,17 @@ import './about.css';
 export default function About() {
   return (
     <div className='about-container' id='about-section'>
-    <div className='about-content'>
-      <h1>About</h1>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Cras auctor tempus metus, non dignissim enim blandit a. Aenean
-      sollicitudin turpis et enim vehicula eleifend. Sed non ipsum leo.
-      Quisque id lectus sed arcu bibendum tempus non sit amet augue.
-      Curabitur leo ante, lacinia vel lobortis ac, luctus vel neque.
-      Maecenas gravida sed felis eget eleifend. Duis sem orci, aliquet
-      at tortor quis, convallis suscipit erat. Quisque sed rutrum neque.
-      Phasellus eget nisi dignissim, dapibus arcu non, pulvinar est.
-      Donec tellus lacus, feugiat non ante id, elementum vehicula nisi.
-      Vestibulum magna orci, scelerisque id dapibus porta, varius ac odio.</p>
+    <div className='about-content-container'>
+      <div className='about-image'>
+        Image
+      </div>
+      <div className='about-text'>
+      <h1 className='about-header'>What is ShellHacks?</h1>
+      <p>ShellHacks is an upcoming 36-hour hackathon at Florida International University (FIU),
+        taking place the weekend of Friday, September 29 to Sunday, October 1st.<br /><br />Our
+        mission is to provide students with the opportunity to learn about new technologies,
+        create innovative projects, and share their work with the community!</p>
+      </div>
     </div>
     </div>
   );

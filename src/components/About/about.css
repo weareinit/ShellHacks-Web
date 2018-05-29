@@ -4,11 +4,31 @@
 	background-color: #FF9EE5;
 	display: grid;
 	grid-template-columns: var(--container-columns-small);
-	grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
+  padding: 4em 0;
 }
 
-.about-content {
-	grid-column: 2 / 3;
+.about-content-container {
+  grid-column: 2 / 3;
+  display: flex;
+}
+
+.about-content-container h1 {
+  font-size: 40pt;
+}
+
+.about-content-container p {
+  font-size: 16pt;
+}
+
+.about-image {
+  min-height: 100%;
+  width: 50%;
+  border: 2px solid black;
+}
+
+.about-text {
+  width: 50%;
 }
 
 @media only screen and (min-width: 1044px) {
@@ -16,7 +36,7 @@
 		grid-template-columns: var(--container-columns-large);
 	}
 
-	.about-content {
+	.about-content-container {
 		grid-column: 3 / 4;
 	}
 }
