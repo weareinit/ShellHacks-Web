@@ -5,15 +5,11 @@
   flex-direction: column;
 }
 
-.register-header {
-  text-align: center;
-  margin: 0;
-}
-
 .signup-container {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 350px;
+  width: 400px;
   margin: auto;
   padding: 20px;
   justify-content: space-between;
@@ -21,7 +17,21 @@
   border-radius: 4px;
 }
 
-form {
+.register-header {
+  text-align: center;
+  margin: 0;
+  font-size: 30pt;
+}
+
+.signup-container form {
   display: flex;
   flex-direction: column;
+}
+
+.signup-container form input {
+  font-size: 16pt;
+  text-align: center;
+  padding: .5em;
+  margin: .3em;
+  border-radius: 10px;
 }
