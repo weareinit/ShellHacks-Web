@@ -1,0 +1,13 @@
+.banner {
+  background: url('../../assets/lance-asper-188744-unsplash.jpg') center;
+  background-size: cover;
+  grid-area: banner;
+  height: 100vh;
+}
+
+.title{
+	text-align: center;
+	position: relative;
+	top: 350px;
+	font-size: 30px;
+}
