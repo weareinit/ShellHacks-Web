@@ -9,7 +9,7 @@ export default class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isWideScreen: true, // if is widescreen, show widenav else show narrownav
+      isWideScreen: true,
       isDropdownOpen: false,
       windowLocation: '',
       menuItems: [
@@ -28,6 +28,10 @@ export default class Nav extends React.Component {
         {
           text: 'Sponsors',
           link: 'sponsors-section',
+        },
+        {
+          text: 'Log In',
+          link: '#',
         },
       ],
     };
@@ -54,14 +58,14 @@ export default class Nav extends React.Component {
   }
 
   handleResize() {
-    if (window.innerWidth >= 480) {
+    if (window.innerWidth >= 750) {
       if (!this.state.isWideScreen) {
         this.setState(prevState => ({
           isWideScreen: !prevState.isWideScreen,
           isDropdownOpen: false,
         }));
       }
-    } else if (window.innerWidth < 480) {
+    } else if (window.innerWidth < 750) {
       if (this.state.isWideScreen) {
         this.setState(prevState => ({
           isWideScreen: !prevState.isWideScreen,
@@ -115,12 +119,10 @@ export default class Nav extends React.Component {
           return (
             <NavNarrow toggle={this.toggleDropdown}
             isOpen={this.state.isDropdownOpen}>
-              <div className='dropdown-items'>
               {this.state.menuItems.map(item =>
                 <NavItem linkClick={this.scrollToWindowPosition}
                 key={item.text} {...item}/>)
               }
-              </div>
             </NavNarrow>);
         })()}
       </nav>
