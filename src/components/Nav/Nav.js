@@ -9,7 +9,7 @@ export default class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isWideScreen: true,
+      isWideScreen: false,
       isDropdownOpen: false,
       windowLocation: '',
       menuItems: [
@@ -61,18 +61,22 @@ export default class Nav extends React.Component {
     if (window.innerWidth >= 750) {
       if (!this.state.isWideScreen) {
         this.setState(prevState => ({
-          isWideScreen: !prevState.isWideScreen,
+          isWideScreen: true,
           isDropdownOpen: false,
         }));
       }
     } else if (window.innerWidth < 750) {
       if (this.state.isWideScreen) {
         this.setState(prevState => ({
-          isWideScreen: !prevState.isWideScreen,
+          isWideScreen: false,
           isDropdownOpen: false,
         }));
       }
     }
+  }
+
+  componentWillMount() {
+    this.handleResize();
   }
 
   componentDidMount() {
