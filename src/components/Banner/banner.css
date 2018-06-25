@@ -1,5 +1,5 @@
 .banner {
-  background: url('../../assets/lance-asper-188744-unsplash.jpg') center;
+  background: url('../../assets/Miami_Beach_Gradient_Swoosh.png') center;
   background-size: cover;
   grid-area: banner;
   height: 700px;
@@ -11,6 +11,7 @@
   width: 50%;
   margin-top: auto;
   margin-left: auto;
+  color: white;
 }
 
 .banner-text h1{

@@ -1,9 +1,10 @@
 .sponsors-container {
     grid-area: sponsors;
-    background-color: #ff9ee5;
+    background: linear-gradient(rgb(120, 118, 233) 0, rgb(120, 118, 233) 10%, rgb(235, 42, 177));
     display: grid;
     grid-template-columns: var(--container-columns-small);
     grid-template-rows: 1fr;
+    min-height: 700px;
 }
 
 .sponsors-content {

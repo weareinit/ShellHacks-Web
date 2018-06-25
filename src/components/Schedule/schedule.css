@@ -1,9 +1,10 @@
 .schedule-container{
 	grid-area: schedule;
-	background-color: #76f3f1;
-	display: grid;
+	background: linear-gradient(rgb(14, 9, 90), rgb(120, 118, 233));
+  display: grid;
+  min-height: 500px;
 	grid-template-columns: var(--container-columns-small);
-	grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
 }
 
 .schedule-content {

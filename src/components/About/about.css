@@ -1,7 +1,6 @@
 .about-container {
 	grid-area: about;
-	background: url('../../assets/lance-asper-188744-unsplash.jpg') center;
-	background-color: #FF9EE5;
+	background-color: rgb(12, 8, 70);
 	display: grid;
 	grid-template-columns: var(--container-columns-small);
   grid-template-rows: 1fr;
@@ -29,6 +28,7 @@
 
 .about-text {
   width: 50%;
+  color: white;
 }
 
 @media only screen and (min-width: 1044px) {
