@@ -3,6 +3,8 @@
   flex-direction: row;
   width: 100%;
   padding: 0 10px;
+  padding-right: 150px;
+  /*use padding here to make space for MLH logo*/
 }
 
 .logo {
@@ -13,12 +15,38 @@
 
 .navbar-items {
   display: flex;
+  transition: 0.3s ease;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .navbar-item {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 5em;
   text-align: center;
   font-size: 14pt;
   line-height: 3.2em;
+  font-family: 'Kanit', sans-serif;
+}
+/*hover effect for selecting menu items, has error since list items together, 
+the component to accept props.children takes this all in making effect so singular
+unit, the navbar elements, needs adjustment*/
+.navbar-items:hover{
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  
+  padding: 6px 0; 
+}
+
+.mlh{
+  display:block;
+  max-width:100px;
+  min-width:60px;
+  position:fixed;
+  right:50px;
+  top:0;
+  width:10%;
+  z-index:10000; 
 }

@@ -3,13 +3,17 @@ import React from 'react';
 
 import NavItem from '../NavItem/NavItem';
 import './navWide.css';
-
+//added images to work with here
 const NavWide = props =>
     <div className='navbar-container'>
-      <Link to='/' className="logo">ShellHacks</Link>
+      <Link to='/' className="logo"><i className="fas fa-camera-retro"></i></Link>
+      {/* Used a placeholder icon here 'fa-camera-retro', need to get custom svg file of shell logo to create new icon */}
       <ul className="navbar-items">
         {props.children}
       </ul>
+      <a className="mlh" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=blue">
+        <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" alt="Major League Hacking 2019 Hackathon Season"/>
+      </a>
     </div>;
 
 export default NavWide;
