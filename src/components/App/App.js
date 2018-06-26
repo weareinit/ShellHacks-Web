@@ -8,6 +8,7 @@ import About from '../About/About';
 import RegisterApp from '../Auth/Register/RegisterApp';
 import Schedule from '../Schedule/Schedule';
 import Sponsors from '../Sponsors/Sponsors';
+import Faq from '../Faq/Faq';
 
 import './app.css';
 
@@ -18,6 +19,7 @@ const MainApp = () => (
     <About />
     <Schedule />
     <Sponsors />
+    <Faq />
     <Footer />
   </div>
 );

@@ -1,0 +1,31 @@
+.faq-container {
+  grid-area: faq;
+  display: grid;
+  grid-template-columns: var(--container-columns-small);
+  grid-template-rows: 1fr;
+  min-height: 500px;
+  background: linear-gradient(rgb(255, 0, 149) 5%, rgb(12, 8, 70));
+}
+
+.faq-content-container {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.faq-content-container h1 {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 1044px) {
+	.faq-container {
+		grid-template-columns: var(--container-columns-large);
+	}
+
+	.faq-content-container {
+		grid-column: 3 / 4;
+	}
+}
