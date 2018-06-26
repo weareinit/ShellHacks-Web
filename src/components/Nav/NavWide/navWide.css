@@ -30,14 +30,10 @@
   line-height: 3.2em;
   font-family: 'Kanit', sans-serif;
 }
-/*hover effect for selecting menu items, has error since list items together, 
-the component to accept props.children takes this all in making effect so singular
-unit, the navbar elements, needs adjustment*/
-.navbar-items:hover{
+
+.navbar-item:hover{
   border-top: 3px solid #ffffff;
   border-bottom: 3px solid #ffffff;
-  
-  padding: 6px 0; 
 }
 
 .mlh{
