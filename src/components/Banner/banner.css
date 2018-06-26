@@ -1,5 +1,5 @@
 .banner {
-  background: linear-gradient(transparent 98%, rgba(12, 8, 70, 1)), url('../../assets/Miami_Beach_Gradient_Swoosh.png') center;
+  background: linear-gradient(transparent 98%, 	#020646), url('../../assets/Miami_Beach_Gradient_Swoosh.png') center;
   background-size: cover;
   grid-area: banner;
   height: 700px;
@@ -7,11 +7,16 @@
 }
 
 .banner-text {
-  min-height: 50%;
-  width: 50%;
-  margin-top: auto;
-  margin-left: auto;
+  width: 75%;
+  height: 75%;
+  margin: auto;
   color: white;
+}
+
+.banner-text img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
 }
 
 .banner-text h1{
