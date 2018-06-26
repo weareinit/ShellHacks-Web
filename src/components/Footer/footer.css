@@ -1,9 +1,85 @@
 .footer {
     grid-area: footer;
-    background-color: rgb(12, 8, 70);
-    color: white;
-    height: 4em;
+    background-color: black;
+    min-height: 150px;
+    max-height: 300px;
+    /* height: 4em; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    flex-direction: row;
     padding: 0 var(--base-gutter-size) 0 var(--base-gutter-size);
+    padding-left: 20px;
+}
+
+.resize {
+    width: 100px;
+    height : auto;
+}
+
+/*two refers to the second div flex element*/
+
+.two button{
+    margin-bottom: 20px;
+    background-color: #ff1493; 
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+.two button:hover{
+    background-color: lightblue;
+}
+/*allows responsive footer, could not place div .two container to next row when
+screen size lowers too much for better look*/
+.two i{
+    color: white;
+    min-width: 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+} 
+.resize {
+    width: auto;
+    height : 100px;
+}
+.two{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    text-align: center;
+    margin-left:26vw;
+    
+}
+/* .three{
+    padding-left: 200px;
+    third div element not used here
+} */
+.two a{
+    /* padding-left: 20px; */
+   
+}
+.three p{
+    font-family: 'Kanit', sans-serif;
+}
+.mlhconduct{
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.b1{
+    
+    margin-right: 10px;
+}
+.two button{
+    margin-top:10px;
 }

@@ -15,7 +15,9 @@ const NavNarrow = props =>
           <div className='dropdown-items'>
           {props.children}
           </div>
-          <button className='menu-close-button'>X</button>
+          {/* <button className='menu-close-button'>X</button>
+          added font awesome close button */}
+          <i className="far fa-window-close fa-3x menu-close-button"></i>
         </div>);
       }
       return null;
