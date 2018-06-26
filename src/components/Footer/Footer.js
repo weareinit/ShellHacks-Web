@@ -1,8 +1,8 @@
 import React from 'react';
 import shellhackstitle from './shellhackstitle.png';
-//imported image from assets Shellhacks Marketing folder
+// imported image from assets Shellhacks Marketing folder
 import './footer.css';
-//added links to social media, font awesome icons used, 3x size
+// added links to social media, font awesome icons used, 3x size
 export default function Footer() {
   return (
     <div className="footer">
@@ -34,7 +34,6 @@ export default function Footer() {
         </a>
         <br/>
         <br/>
-        
         <a className="mlhconduct" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>
       </div>
     </div>
