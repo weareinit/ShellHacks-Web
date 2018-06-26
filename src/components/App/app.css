@@ -21,6 +21,7 @@ html,body {
 
 :root {
   --blue-primary: rgb(12, 8, 70);
+  --blue-primary-light: rgb(48, 40, 148);
   --blue-secondary: rgb(120, 118, 233);
   --pink-primary: rgb(255, 0, 149);
   --base-gutter-size: 10px;
