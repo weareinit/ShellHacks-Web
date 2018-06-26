@@ -1,0 +1,20 @@
+.faq-elem {
+  flex: 1 1 300px;
+  background-color: var(--blue-primary);
+  min-height: 200px;
+  margin: 6px 6px;
+}
+
+.faq-elem h3 {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  background-color: var(--blue-primary-light);
+  padding: 20px 0;
+  margin: 0;
+}
+
+.faq-elem p {
+  text-align: center;
+  color: white;
+}
