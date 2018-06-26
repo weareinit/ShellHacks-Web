@@ -1,7 +1,7 @@
 .about-container {
 	grid-area: about;
-	background-color: rgb(12, 8, 70);
-	display: grid;
+	background: linear-gradient(rgba(12, 8, 70, 1) 99%, rgba(12, 8, 70, .5));
+  display: grid;
 	grid-template-columns: var(--container-columns-small);
   grid-template-rows: 1fr;
   padding: 4em 0;
