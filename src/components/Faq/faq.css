@@ -1,0 +1,5 @@
+.faq-container {
+  grid-area: faq;
+  min-height: 500px;
+  background: linear-gradient(rgb(235, 42, 177) 5%, rgb(12, 8, 70));
+}
