@@ -3,11 +3,12 @@ import React from 'react';
 
 import NavItem from '../NavItem/NavItem';
 import './navWide.css';
-//added images to work with here
+// added images to work with here
 const NavWide = props =>
     <div className='navbar-container'>
       <Link to='/' className="logo"><i className="fas fa-camera-retro"></i></Link>
-      {/* Used a placeholder icon here 'fa-camera-retro', need to get custom svg file of shell logo to create new icon */}
+      {/* Used a placeholder icon here 'fa-camera-retro', need to get custom svg
+      file of shell logo to create new icon */}
       <ul className="navbar-items">
         {props.children}
       </ul>
