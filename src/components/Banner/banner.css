@@ -1,5 +1,5 @@
 .banner {
-  background: linear-gradient(transparent 98%, 	#020646), url('../../assets/Miami_Beach_Gradient_Swoosh.png') center;
+  background: linear-gradient(transparent 98%, 	var(--blue-primary)), url('../../assets/Miami_Beach_Gradient_Swoosh.png') center;
   background-size: cover;
   grid-area: banner;
   height: 700px;

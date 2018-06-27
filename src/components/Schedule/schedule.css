@@ -1,6 +1,6 @@
 .schedule-container{
 	grid-area: schedule;
-	background: linear-gradient(rgb(12, 8, 70) 5%, rgb(120, 118, 233) 99%, transparent);
+	background: linear-gradient(var(--blue-primary) 5%, var(--blue-secondary) 99%, transparent);
   display: grid;
   margin-top: -5px;
   min-height: 500px;

@@ -1,7 +1,7 @@
 nav {
   grid-area: nav;
   z-index: 100;
-  background-color:  #ff1493; 
+  background-color: var(--pink-primary);
   height: 4em;
   display: flex;
   position: fixed;

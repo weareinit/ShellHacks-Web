@@ -1,6 +1,6 @@
 .about-container {
 	grid-area: about;
-	background: linear-gradient(	rgba(2, 6, 70, 1) 99%, rgba(2, 6, 70, .5));
+	background: linear-gradient(var(--blue-primary) 99%, transparent);
   display: grid;
 	grid-template-columns: var(--container-columns-small);
   grid-template-rows: 1fr;

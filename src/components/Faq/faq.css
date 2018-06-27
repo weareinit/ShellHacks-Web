@@ -4,7 +4,7 @@
   grid-template-columns: var(--container-columns-small);
   grid-template-rows: 1fr;
   min-height: 500px;
-  background: linear-gradient(rgb(255, 0, 149) 5%, rgb(12, 8, 70));
+  background: linear-gradient(var(--pink-primary) 10%, rgb(12, 8, 70));
 }
 
 .faq-content-container {
