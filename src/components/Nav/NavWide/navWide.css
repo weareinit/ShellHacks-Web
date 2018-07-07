@@ -8,9 +8,11 @@
 }
 
 .logo {
-  font-size: 24pt;
-  align-self: center;
   margin-right: auto;
+  background: url('../../../assets/ShellHacks_Logo_White@4x.png') no-repeat;
+  margin-top: 2px;
+  background-size: 50px;
+  width: 60px;
 }
 
 .navbar-items {
