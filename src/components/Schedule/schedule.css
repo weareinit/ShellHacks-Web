@@ -1,15 +1,13 @@
 .schedule-container{
 	grid-area: schedule;
-	background: linear-gradient(var(--blue-primary) 5%, var(--blue-secondary) 99%, transparent);
-  display: grid;
-  margin-top: -5px;
-  min-height: 500px;
+	background-color: #76f3f1;
+	display: grid;
 	grid-template-columns: var(--container-columns-small);
-  grid-template-rows: 1fr;
+	grid-template-rows: 1fr;
 }
 
 .schedule-content {
-	grid-column: 2 / 3;
+	grid-column: 1 / 4;
 }
 
 @media only screen and (min-width: 1044px) {
@@ -20,4 +18,8 @@
 	.schedule-content {
 		grid-column: 3 / 4;
 	}
+}
+
+.text{
+	margin-left: 10px;
 }

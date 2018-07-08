@@ -1,0 +1,43 @@
+body{
+	background-color: #76f3f1;
+
+}
+.form{
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	margin: auto;
+    border: 3px solid #ff9ee5;
+    padding: 10px;
+    max-width: 500px;
+    width: calc(100vw - 40px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+h1{
+	text-align: center;
+	font-size: 50px;
+
+}
+.password{
+	margin-bottom: 40px;
+}
+.btnlogin{
+	margin-left: 50px;
+}
+
+input{
+	width: 300px;
+	border: none;
+    border-bottom: .1em solid rgba(0, 0, 0, .75);
+}
+.btnforgot{
+
+}
+.btn{
+background-color: rgb(221,221,221);
+margin-bottom: 20px;
+border-radius: 5px;
+border-color: rgba(0,0,0,.5);
+}
