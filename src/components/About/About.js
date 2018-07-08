@@ -5,7 +5,7 @@ import './about.css';
 export default function About() {
   return (
     <div className='about-container' id='about-section'>
-    <div className='about-content-container'>
+    <div className='about-content'>
       <div className='about-image'>
         Image
       </div>

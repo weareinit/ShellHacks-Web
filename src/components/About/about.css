@@ -7,16 +7,16 @@
   padding: 4em 0;
 }
 
-.about-content-container {
+.about-content {
   grid-column: 2 / 3;
   display: flex;
 }
 
-.about-content-container h1 {
+.about-content h1 {
   font-size: 40pt;
 }
 
-.about-content-container p {
+.about-content p {
   font-size: 16pt;
 }
 
@@ -36,7 +36,7 @@
 		grid-template-columns: var(--container-columns-large);
 	}
 
-	.about-content-container {
+	.about-content {
 		grid-column: 3 / 4;
 	}
 }
