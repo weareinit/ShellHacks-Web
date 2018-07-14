@@ -7,7 +7,7 @@
 }
 
 .schedule-content {
-	grid-column: 1 / 4;
+	grid-column: 2 / 3;
 }
 
 @media only screen and (min-width: 1044px) {
