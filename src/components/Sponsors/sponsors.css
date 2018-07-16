@@ -1,6 +1,5 @@
 .sponsors-container {
     grid-area: sponsors;
-    background: linear-gradient(var(--blue-secondary) 1%, var(--pink-primary) 95%);
     display: grid;
     margin-top: -7px;
     grid-template-columns: var(--container-columns-small);

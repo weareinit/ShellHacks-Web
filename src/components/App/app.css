@@ -7,6 +7,10 @@ html,body {
   display: grid;
   min-height: 100vh;
   min-width: 100%;
+  background: var(--pink-primary);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, var(--blue-primary), var(--pink-primary));
+  background: linear-gradient(to bottom, var(--blue-primary) 15%, var(--pink-primary));
+  color: white;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas:

@@ -5,7 +5,6 @@
   grid-template-rows: 1fr;
   min-height: 500px;
   padding: 100px 0;
-  background: linear-gradient(var(--pink-primary) 10%, rgb(12, 8, 70));
 }
 
 .faq-content-container {
