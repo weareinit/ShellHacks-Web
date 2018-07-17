@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';
 import About from '../About/About';
 import RegisterApp from '../Auth/Register/RegisterApp';
+import Login from '../Auth/Login/login';
 import Schedule from '../Schedule/Schedule';
 import Sponsors from '../Sponsors/Sponsors';
 import Faq from '../Faq/Faq';
@@ -31,6 +32,7 @@ const App = () => (
     <Switch>
       <Route exact path='/' component={MainApp}></Route>
       <Route path='/register' component={RegisterApp}></Route>
+      <Route path='/login' component={Login}></Route>
     </Switch>
   </Router>
 );
