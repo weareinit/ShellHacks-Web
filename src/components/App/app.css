@@ -23,7 +23,7 @@ html,body {
 .bg1 {
   grid-row-start: 3;
   background: url('../../assets/Gradient_1.png');
-  background-size: cover;
+  background-size: contain;
 }
 
 :root {
