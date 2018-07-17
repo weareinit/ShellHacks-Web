@@ -9,7 +9,6 @@ export default function login() {
     <Nav />
     <div className='login-container'>
     <h1> Login </h1><br />
-      <div className="form">
       <form>
         <h2> Email </h2>
         <input type = "textfield" />
@@ -18,7 +17,6 @@ export default function login() {
         <button className="btn btnforgot" >Forgot Password?</button>
         <button className="btn btnlogin">Login</button>
       </form>
-      </div>
     </div>
   </div>
   );
