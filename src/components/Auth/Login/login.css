@@ -3,9 +3,12 @@
   min-height: 100vh;
   min-width: 100%;
   flex-direction: column;
-  background-image: url('../../../assets/Gradient_1.png');
-  background-size: contain;
+  background-color: #76f3f1;
   color: white;
+}
+
+.login-container {
+  padding: 20px;
 }
 
 .login-container form{
@@ -23,7 +26,8 @@
 }
 .login-container h1{
 	text-align: center;
-	font-size: 50px;
+  font-size: 50px;
+  padding: .5em;
 }
 
 .login-container .password{
