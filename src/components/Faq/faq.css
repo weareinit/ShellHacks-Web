@@ -4,7 +4,9 @@
   grid-template-columns: var(--container-columns-small);
   grid-template-rows: 1fr;
   min-height: 500px;
-  padding: 100px 0;
+  padding-bottom: 200px;
+  background: url('../../assets/Gradient_3.png');
+  background-size: contain;
 }
 
 .faq-content-container {
