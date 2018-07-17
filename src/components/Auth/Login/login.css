@@ -1,8 +1,14 @@
-body{
-	background-color: #76f3f1;
-
+.login {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100%;
+  flex-direction: column;
+  background-image: url('../../../assets/Gradient_1.png');
+  background-size: contain;
+  color: white;
 }
-.form{
+
+form{
 	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
@@ -27,7 +33,7 @@ h1{
 	margin-left: 50px;
 }
 
-input{
+.login-form input{
 	width: 300px;
 	border: none;
     border-bottom: .1em solid rgba(0, 0, 0, .75);
