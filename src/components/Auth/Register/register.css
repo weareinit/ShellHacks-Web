@@ -3,6 +3,9 @@
   min-height: 100vh;
   min-width: 100%;
   flex-direction: column;
+  background-image: url('../../../assets/Gradient_1.png');
+  background-size: contain;
+  color: white;
 }
 
 .signup-container {
