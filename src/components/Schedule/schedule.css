@@ -1,6 +1,6 @@
 .schedule-container{
-	grid-area: schedule;
-	background-color: #76f3f1;
+  grid-area: schedule;
+  background-color: none;
 	display: grid;
 	grid-template-columns: var(--container-columns-small);
 	grid-template-rows: 1fr;

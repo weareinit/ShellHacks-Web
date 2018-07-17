@@ -16,8 +16,10 @@ const MainApp = () => (
   <div className='app'>
     <Nav />
     <Banner />
+    <div className='bg1'>
     <About />
     <Schedule />
+    </div>
     <Sponsors />
     <Faq />
     <Footer />
