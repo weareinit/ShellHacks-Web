@@ -6,9 +6,7 @@ export default function About() {
   return (
     <div className='about-container' id='about-section'>
     <div className='about-content'>
-      <div className='about-image'>
-        Image
-      </div>
+      <div className='about-image'></div>
       <div className='about-text'>
       <h1 className='about-header'>What is ShellHacks?</h1>
       <p>ShellHacks is an upcoming 36-hour hackathon at Florida International University (FIU),
