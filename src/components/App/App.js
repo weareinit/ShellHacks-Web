@@ -16,8 +16,8 @@ import './app.css';
 const MainApp = () => (
   <div className='app'>
     <Nav />
-    <Banner />
     <div className='bg1'>
+    <Banner />
     <About />
     <Schedule />
     </div>

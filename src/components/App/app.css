@@ -21,9 +21,10 @@ html,body {
 }
 
 .bg1 {
-  grid-row-start: 3;
-  background: url('../../assets/Gradient_1.png');
-  background-size: contain;
+  grid-row-start: 2;
+  background: url('../../assets/Miami_Beach_Gradient_Swoosh.png');
+  background-size: cover;
+  padding-bottom: 230px;
 }
 
 :root {
