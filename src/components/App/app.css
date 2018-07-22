@@ -32,7 +32,10 @@ html,body {
   --blue-primary-light: rgb(48, 40, 148);
   --blue-secondary: rgb(120, 118, 233);
   --pink-primary: rgb(256, 30, 142);
-  --base-gutter-size: 10px;
+  --base-gutter-size: 20px;
+
   --container-columns-small: var(--base-gutter-size) 1fr var(--base-gutter-size);
-  --container-columns-large: var(--base-gutter-size) 1fr 1024px 1fr var(--base-gutter-size);
+
+  --large-inner-width: 1100px;
+  --container-columns-large: var(--base-gutter-size) 1fr var(--large-inner-width) 1fr var(--base-gutter-size);
 }
