@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Nav from '../../Nav/Nav';
-import './login.css';
+import './../auth.css';
 
 export default function login() {
   return (
-  <div className='login'>
+  <div className='container'>
     <Nav />
-    <div className='login-container'>
+    <div className='animated fadeIn container-content'>
     <h1> Login </h1><br />
       <form>
         <h2> Email </h2>

@@ -1,21 +1,26 @@
 .schedule-container{
+	margin-left: 10px;
   grid-area: schedule;
 	display: grid;
 	grid-template-columns: var(--container-columns-small);
 	grid-template-rows: 1fr;
+	
 }
 
 .schedule-content {
 	grid-column: 1 / 3;
+	
 }
 
 @media only screen and (min-width: 1044px) {
 	.schedule-container {
 		grid-template-columns: var(--container-columns-large);
+		
 	}
 
 	.schedule-content {
 		grid-column: 3 / 4;
+		
 	}
 }
 

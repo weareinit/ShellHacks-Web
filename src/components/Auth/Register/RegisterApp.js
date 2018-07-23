@@ -2,18 +2,21 @@ import React from 'react';
 
 import Nav from '../../Nav/Nav';
 
-import './register.css';
+import './../auth.css';
 
 const RegisterApp = () => (
-  <div className='register'>
+  <div className='container'>
     <Nav />
-    <div className='signup-container'>
-      <h2 className='register-header'>Register</h2>
+    <div className='animated fadeIn container-content'>
+      <h1 className='register-header'>Register</h1>
       <form method='post'>
-        <input type='email' placeholder='Enter email*'/>
-        <input type='password' placeholder='Enter password*'/>
-        <input type='password' placeholder='Confirm password*'/>
-        <input type='submit' value='Submit'/>
+      <h2>Enter Email </h2>
+        <input className="password" type='email' />
+        <h2>Enter Password </h2>
+        <input className="password" type='password'/>
+        <h2>Confirm Password </h2>
+        <input className="password" type='password' />
+        <button className="btn btnlogin" type='submit' value='Submit'>Register</button>
       </form>
     </div>
   </div>
