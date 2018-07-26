@@ -1,14 +1,15 @@
 .about-container {
   grid-area: about;
   display: grid;
+  width: 100vw;
 	grid-template-columns: var(--container-columns-small);
-  grid-template-rows: 1fr;
-  padding: 20em 0;
+  padding: 7em 0;
 }
 
 .about-content {
   grid-column: 2 / 3;
   display: flex;
+  flex-direction: column;
 }
 
 .about-content h1 {
@@ -20,23 +21,50 @@
 }
 
 .about-image {
-  min-height: 100%;
-  width: 50%;
+  min-width: 380px; /*TODO: image resize on small screens*/
+  height: 380px;
   background: url('../../assets/Filler_Circle.png') no-repeat;
   background-size: contain;
+  margin: 0 auto 7em auto;
 }
 
 .about-text {
-  width: 50%;
+  width: 100%;
   color: white;
+  text-align: left;
 }
 
-@media only screen and (min-width: 1044px) {
+@media only screen and (min-width: 840px) {
+  .about-container {
+    grid-template-columns: var(--container-columns-medium);
+  }
+  .about-content {
+    grid-column: 3 / 4;
+    flex-direction: row;
+    margin: 0;
+  }
+  .about-image {
+    width: 300px;
+    margin: 0 auto 0 auto;
+  }
+  .about-text {
+    width: 400px;
+    margin-left: auto;
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
 	.about-container {
 		grid-template-columns: var(--container-columns-large);
 	}
-
 	.about-content {
 		grid-column: 3 / 4;
-	}
+  }
+  .about-text {
+    width: 600px;
+  }
+  .about-image {
+    width: 450px;
+  }
 }
