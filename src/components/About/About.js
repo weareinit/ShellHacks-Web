@@ -11,6 +11,7 @@ export default class About extends React.Component {
   }
 
   componentDidMount() {
+    /* TODO: change animation sequence; center image on text's height */
     const imageConfig = {
       origin: 'bottom',
       duration: 800,
@@ -19,6 +20,8 @@ export default class About extends React.Component {
       opacity: 1,
       easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
     };
+
+    /* TODO: remove delay depending on screen size */
     const textConfig = {
       origin: 'bottom',
       duration: 1000,
@@ -31,7 +34,7 @@ export default class About extends React.Component {
     window.sr.reveal(this.textRef.current, textConfig);
   }
 
-  // find cleanup method of ScrollReveal to tear down the object in componentWillUnmount
+  // TODO: find cleanup method of ScrollReveal to tear down the object in componentWillUnmount
 
   render() {
     return (
@@ -39,11 +42,14 @@ export default class About extends React.Component {
       <div className='about-content'>
         <div className='about-image' ref={this.imageRef}></div>
         <div className='about-text' ref={this.textRef}>
-        <h1 className='about-header'>What is ShellHacks?</h1>
-        <p>ShellHacks is an upcoming 36-hour hackathon at Florida International University (FIU),
-          taking place the weekend of Friday, September 29 to Sunday, October 1st.<br /><br />Our
-          mission is to provide students with the opportunity to learn about new technologies,
-          create innovative projects, and share their work with the community!</p>
+          <h1 className='about-header'>What is ShellHacks?</h1>
+          <p>ShellHacks is an upcoming 36-hour hackathon at Florida International University (FIU),
+            taking place the weekend of Friday, September 29 to Sunday, October 1st.
+            <br />
+            <br />
+            Our mission is to provide students with the opportunity to learn about new technologies,
+            create innovative projects, and share their work with the community!
+          </p>
         </div>
       </div>
       </div>
