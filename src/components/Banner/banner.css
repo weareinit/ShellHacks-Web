@@ -25,3 +25,22 @@
 .banner-text p{
   font-size: 14pt;
 }
+
+.banner-text button{
+  background-color: #ff1493;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border-color: rgba(0,0,0,.5);
+  margin-left: 10px;
+  color: white;
+  box-shadow: 0 1px #999;
+}
+
+.banner-text button:hover{
+  background-color:var(--blue-primary-light);
+}
+
+.banner-text button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}

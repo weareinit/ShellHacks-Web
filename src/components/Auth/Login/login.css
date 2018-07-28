@@ -1,8 +1,17 @@
-body{
-	background-color: #76f3f1;
-
+.login {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100%;
+  flex-direction: column;
+  background-color: #76f3f1;
+  color: white;
 }
-.form{
+
+.login-container {
+  padding: 20px;
+}
+
+.login-container form{
 	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
@@ -15,27 +24,27 @@ body{
     width: calc(100vw - 40px);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 }
-h1{
+.login-container h1{
 	text-align: center;
-	font-size: 50px;
-
+  font-size: 50px;
+  padding: .5em;
 }
-.password{
+
+.login-container h2{
 	margin-bottom: 40px;
 }
+
 .btnlogin{
 	margin-left: 50px;
 }
 
-input{
+.login-container input{
 	width: 300px;
 	border: none;
     border-bottom: .1em solid rgba(0, 0, 0, .75);
 }
-.btnforgot{
 
-}
-.btn{
+.login-container .btn{
 background-color: rgb(221,221,221);
 margin-bottom: 20px;
 border-radius: 5px;
