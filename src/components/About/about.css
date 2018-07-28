@@ -3,7 +3,7 @@
   display: grid;
   width: 100vw;
 	grid-template-columns: var(--container-columns-small);
-  padding: 7em 0;
+  padding: 15em 0 15em 0;
 }
 
 .about-content {
@@ -13,6 +13,7 @@
 }
 
 .about-content h1 {
+  text-align: left;
   font-size: 40pt;
 }
 
@@ -41,7 +42,6 @@
   .about-content {
     grid-column: 3 / 4;
     flex-direction: row;
-    margin: 0;
   }
   .about-image {
     width: 300px;
@@ -58,9 +58,6 @@
 	.about-container {
 		grid-template-columns: var(--container-columns-large);
 	}
-	.about-content {
-		grid-column: 3 / 4;
-  }
   .about-text {
     width: 600px;
   }

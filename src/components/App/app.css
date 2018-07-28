@@ -26,6 +26,12 @@ html,body {
   padding-bottom: 230px;
 }
 
+@media only screen and (min-width: 840px) {
+  .bg1 {
+    background-size: 100% 100%;
+  }
+}
+
 :root {
   --blue-primary: rgb(3, 4, 69);
   --blue-primary-light: rgb(48, 40, 148);
