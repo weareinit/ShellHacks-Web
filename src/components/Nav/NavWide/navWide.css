@@ -36,6 +36,9 @@
 .navbar-item:hover{
   border-top: 3px solid #ffffff;
   border-bottom: 3px solid #ffffff;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  transition: 0.2s ease;
 }
 
 .mlh{
