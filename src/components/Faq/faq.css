@@ -35,7 +35,7 @@
   }
 }
 
-@media only screen and (min-width: 1044px) {
+@media only screen and (min-width: 1140px) {
 	.faq-container {
     grid-template-columns: var(--container-columns-large);
 	}

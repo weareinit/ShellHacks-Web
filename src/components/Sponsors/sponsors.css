@@ -4,7 +4,7 @@
   width: 100vw;
   grid-template-columns: var(--container-columns-small);
   grid-template-rows: 1fr;
-  min-height: 1500px;
+  min-height: 1700px;
   background: url('../../assets/Gradient_2.png');
   background-size: cover;
 }
@@ -27,7 +27,7 @@
   }
 }
 
-@media only screen and (min-width: 1044px) {
+@media only screen and (min-width: 1140px) {
   .sponsors-container {
     grid-template-columns: var(--container-columns-large);
   }
