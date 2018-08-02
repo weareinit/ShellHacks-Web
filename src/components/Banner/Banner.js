@@ -2,6 +2,7 @@ import React from 'react';
 
 import LoginLink from '../Auth/Login/LoginLink';
 import RegisterLink from '../Auth/Register/RegisterLink';
+import ProfileLink from '../../ProfilePage/ProfileLink';
 
 import './banner.css';
 
@@ -14,6 +15,7 @@ export default function Banner() {
       <p>September 21 | Florida International University</p>
       <button><RegisterLink/></button>
       <button><LoginLink/></button>
+      <button><ProfileLink /></button>
     </div>
     </section>
   );

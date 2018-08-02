@@ -10,6 +10,7 @@ import Login from '../Auth/Login/login';
 import Schedule from '../Schedule/Schedule';
 import Sponsors from '../Sponsors/Sponsors';
 import Faq from '../Faq/Faq';
+import Dashboard from '../../ProfilePage/profile';
 
 import './app.css';
 
@@ -27,12 +28,14 @@ const MainApp = () => (
   </div>
 );
 
+// hold state to know if there is an active user session
 const App = () => (
   <Router>
     <Switch>
       <Route exact path='/' component={MainApp}></Route>
       <Route path='/register' component={RegisterApp}></Route>
       <Route path='/login' component={Login}></Route>
+      <Route path='/dashboard' component={Dashboard}></Route>
     </Switch>
   </Router>
 );
