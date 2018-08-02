@@ -2,7 +2,7 @@ import React from 'react';
 
 import LoginLink from '../Auth/Login/LoginLink';
 import RegisterLink from '../Auth/Register/RegisterLink';
-import ProfileLink from '../../ProfilePage/ProfileLink';
+import ProfileLink from '../Auth/ProfilePage/ProfileLink';
 
 import './banner.css';
 
