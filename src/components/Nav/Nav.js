@@ -58,14 +58,14 @@ export default class Nav extends React.Component {
   }
 
   handleResize() {
-    if (window.innerWidth >= 750) {
+    if (window.innerWidth >= 840) {
       if (!this.state.isWideScreen) {
         this.setState(prevState => ({
           isWideScreen: true,
           isDropdownOpen: false,
         }));
       }
-    } else if (window.innerWidth < 750) {
+    } else if (window.innerWidth < 840) {
       if (this.state.isWideScreen) {
         this.setState(prevState => ({
           isWideScreen: false,
