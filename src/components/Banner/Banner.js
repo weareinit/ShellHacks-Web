@@ -3,7 +3,7 @@ import React from 'react';
 import LoginLink from '../Auth/Login/LoginLink';
 import RegisterLink from '../Auth/Register/RegisterLink';
 import ProfileLink from '../Auth/ProfilePage/ProfileLink';
-import SponsorLink from '../Auth/SponsorsLink/SponsorLink';
+import SponsorLink from '../Sponsors/SponsorsLink/SponsorLink';
 
 import './banner.css';
 
