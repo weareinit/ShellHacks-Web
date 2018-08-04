@@ -22,11 +22,11 @@
 }
 
 .about-image {
-  min-width: 380px; /*TODO: image resize on small screens*/
-  height: 380px;
+  min-width: 340px; /*TODO: image resize on small screens, should start at 395px and fall to this*/
+  height: 340px;
   background: url('../../assets/Filler_Circle.png') no-repeat;
   background-size: contain;
-  margin: 0 auto 7em auto;
+  margin: 0 auto 3em auto;
 }
 
 .about-text {
@@ -44,13 +44,14 @@
     flex-direction: row;
   }
   .about-image {
-    width: 300px;
+    min-width: 395px;
+    height: 395px;
     margin: 0 auto 0 auto;
   }
   .about-text {
-    width: 400px;
+    width: 380px;
     margin-left: auto;
-    padding-top: 80px;
+    align-self: center;
   }
 }
 
@@ -59,9 +60,10 @@
 		grid-template-columns: var(--container-columns-large);
 	}
   .about-text {
-    width: 600px;
+    min-width: 500px;
   }
   .about-image {
-    width: 450px;
+    min-width: 450px;
+    height: 450px;
   }
 }
