@@ -1,6 +1,7 @@
 .faq-container {
   grid-area: faq;
   display: grid;
+  width: 100vw;
   grid-template-columns: var(--container-columns-small);
   grid-template-rows: 1fr;
   min-height: 500px;
@@ -9,31 +10,33 @@
   background-size: cover;
 }
 
-.faq-content-container {
+.faq-content {
   grid-column: 2 / 3;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.faq-content-container h1 {
+.faq-content h1 {
   width: 100%;
   text-align: center;
   color: white;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 840px) {
   .faq-container {
-      background-size: 100% 100%;
+    grid-template-columns: var(--container-columns-medium);
+    background-size: 100% 100%;
+  }
+  .faq-content {
+    grid-column: 3 / 4;
+    flex-direction: row;
+    margin: 0;
   }
 }
 
-@media only screen and (min-width: 1044px) {
+@media only screen and (min-width: 1140px) {
 	.faq-container {
     grid-template-columns: var(--container-columns-large);
-	}
-
-	.faq-content-container {
-		grid-column: 3 / 4;
 	}
 }

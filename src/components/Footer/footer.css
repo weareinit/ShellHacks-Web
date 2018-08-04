@@ -1,8 +1,8 @@
 .footer {
     grid-area: footer;
-    background-color: black;
+    background-color:rgb(3, 4, 69);
     min-height: 150px;
-    max-height: 300px;
+    max-height: 320px;
     /* height: 4em; */
     display: flex;
     /* align-items: center; */
@@ -26,13 +26,14 @@
     padding: 5px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block flex;
     font-size: 1vw;
     justify-content: center;
     align-items: center;
+    width: 150px;
 }
 .two button:hover{
-    background-color: lightblue;
+    background-color:  rgb(48, 40, 148);
 }
 /*allows responsive footer, could not place div .two container to next row when
 screen size lowers too much for better look*/
@@ -55,8 +56,8 @@ screen size lowers too much for better look*/
     align-self: center;
     position: relative;
     text-align: center;
-    margin-left:26vw;
-    
+    margin-left:23.8vw;
+    margin-bottom:10px;
 }
 /* .three{
     padding-left: 200px;
@@ -82,4 +83,8 @@ screen size lowers too much for better look*/
 }
 .two button{
     margin-top:10px;
+}
+
+.end{
+    background-color:black;
 }
