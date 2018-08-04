@@ -1,9 +1,11 @@
 .schedule-container{
+	margin-left: 10px;
   grid-area: schedule;
   display: grid;
   width: 100vw;
 	grid-template-columns: var(--container-columns-small);
 	grid-template-rows: 1fr;
+	
 }
 
 .schedule-content {
@@ -25,6 +27,7 @@
 @media only screen and (min-width: 1140px) {
 	.schedule-container {
 		grid-template-columns: var(--container-columns-large);
+		
 	}
 }
 
