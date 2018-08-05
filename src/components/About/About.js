@@ -38,7 +38,7 @@ export default class About extends React.Component {
 
   render() {
     return (
-      <div className='about-container' id='about-section'>
+      <div className='about-container' id='about'>
       <div className='about-content'>
         <div className='about-image' ref={this.imageRef}></div>
         <div className='about-text' ref={this.textRef}>
