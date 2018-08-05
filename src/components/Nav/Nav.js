@@ -15,19 +15,19 @@ export default class Nav extends React.Component {
       menuItems: [
         {
           text: 'About',
-          link: 'about-section',
+          link: 'about',
         },
         {
           text: 'Schedule',
-          link: 'schedule-section',
+          link: 'schedule',
         },
         {
           text: 'FAQ',
-          link: '#',
+          link: 'faq',
         },
         {
           text: 'Sponsors',
-          link: 'sponsors-section',
+          link: 'sponsors',
         },
         {
           text: 'Log In',
@@ -115,7 +115,7 @@ export default class Nav extends React.Component {
               <NavWide>
                 {this.state.menuItems.map(item =>
                   <li key={item.text} className='navbar-item'>
-                  <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
+                  <NavItem {...item}/>
                   </li>)
                 }
               </NavWide>);
@@ -124,8 +124,7 @@ export default class Nav extends React.Component {
             <NavNarrow toggle={this.toggleDropdown}
             isOpen={this.state.isDropdownOpen}>
               {this.state.menuItems.map(item =>
-                <NavItem linkClick={this.scrollToWindowPosition}
-                key={item.text} {...item}/>)
+                <NavItem key={item.text} {...item}/>)
               }
             </NavNarrow>);
         })()}
