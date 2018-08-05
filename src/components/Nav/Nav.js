@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LoginLink from '../Auth/Login/LoginLink';
+import RegisterLink from '../Auth/Register/RegisterLink';
 import NavWide from './NavWide/NavWide';
 import NavNarrow from './NavNarrow/NavNarrow';
 import NavItem from './NavItem/NavItem';
@@ -28,10 +30,6 @@ export default class Nav extends React.Component {
         {
           text: 'Sponsors',
           link: 'sponsors',
-        },
-        {
-          text: 'Log In',
-          link: '#',
         },
       ],
     };
@@ -118,6 +116,8 @@ export default class Nav extends React.Component {
                   <NavItem {...item}/>
                   </li>)
                 }
+                <li className='navbar-item'><LoginLink></LoginLink></li>
+                <li className='navbar-item'><RegisterLink></RegisterLink></li>
               </NavWide>);
           }
           return (
@@ -126,6 +126,8 @@ export default class Nav extends React.Component {
               {this.state.menuItems.map(item =>
                 <NavItem key={item.text} {...item}/>)
               }
+              <a><LoginLink></LoginLink></a>
+              <a><RegisterLink></RegisterLink></a>
             </NavNarrow>);
         })()}
       </nav>
