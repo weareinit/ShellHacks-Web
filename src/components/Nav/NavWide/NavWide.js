@@ -9,7 +9,7 @@ const NavWide = props =>
     <div className='navbar-container'>
       {(() => {
         if (window.location.pathname === '/') {
-          return <HashLink to='/#banner' className="logo"></HashLink>;
+          return <HashLink to='/#home' className="logo"></HashLink>;
         }
         return <Link to='/' className="logo"></Link>;
       })()}
