@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import NavItem from '../NavItem/NavItem';
 
@@ -12,6 +14,12 @@ const NavNarrow = props =>
       if (props.isOpen) {
         return (
         <div className='dropdown'>
+          {(() => {
+            if (window.location.pathname === '/') {
+              return <HashLink to='/#banner' className="logo"></HashLink>;
+            }
+            return <Link to='/' className="logo"></Link>;
+          })()}
           <div className='dropdown-items'>
           {props.children}
           </div>

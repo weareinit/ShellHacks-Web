@@ -93,10 +93,8 @@ export default class Nav extends React.Component {
     }
     if (this.state.isDropdownOpen && !prevState.isDropdownOpen) {
       dropDown.addEventListener('click', this.closeDropdown, false);
-      dropDownItems.addEventListener('click', this.scrollToWindowPosition, true);
     } else if (!this.state.isDropdownOpen && prevState.isDropdownOpen) {
       dropDown.removeEventListener('click', this.closeDropdown);
-      dropDownItems.removeEventListener('click', this.scrollToWindowPosition);
     }
   }
 
@@ -126,8 +124,8 @@ export default class Nav extends React.Component {
               {this.state.menuItems.map(item =>
                 <NavItem key={item.text} {...item}/>)
               }
-              <a><LoginLink></LoginLink></a>
-              <a><RegisterLink></RegisterLink></a>
+              <LoginLink></LoginLink>
+              <RegisterLink></RegisterLink>
             </NavNarrow>);
         })()}
       </nav>
