@@ -10,6 +10,7 @@ import Login from '../Auth/Login/login';
 import Schedule from '../Schedule/Schedule';
 import Sponsors from '../Sponsors/Sponsors';
 import Faq from '../Faq/Faq';
+import Profile from '../../ProfilePage/profile';
 
 import './app.css';
 
