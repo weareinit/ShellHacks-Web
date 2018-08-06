@@ -23,4 +23,23 @@
 		
 	}
 }
+.schedule-container h2{
+	color: white;
+}
+.day {
+	border-radius: 5px; 
+	margin: auto;
+    width: 50%;
+	background-color: #ff1493;
+	width: 200px;
+	text-align: center;
+	box-shadow: 4px 5px #000000;
+}
+
+.text{
+	grid-column: 2 / 3;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
 
