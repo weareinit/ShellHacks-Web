@@ -13,7 +13,7 @@
   width: 15vw ;
   min-width:10vw;
   height: 100vh;
-  background-color: #00FFFF;
+  /* background-color: #00FFFF; */
   font-family: 'Kanit', sans-serif;
   font-weight: bold;
 }
@@ -52,6 +52,6 @@ navbar area might squish a bit, needs fixing here*/
 
 .menu-close-button {
   margin: auto 0 50px 0;
-  background-color:  #00FFFF;
+  /* background-color:  #00FFFF; */
   color:black;
 }

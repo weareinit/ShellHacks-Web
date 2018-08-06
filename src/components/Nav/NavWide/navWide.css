@@ -51,3 +51,10 @@
   width:10%;
   z-index:10000; 
 }
+
+.nav-item-scroll {
+  color: red;
+  font-family: Arial;
+  background-color: white;
+  
+}

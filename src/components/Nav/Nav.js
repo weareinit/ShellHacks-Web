@@ -3,6 +3,7 @@ import React from 'react';
 import NavWide from './NavWide/NavWide';
 import NavNarrow from './NavNarrow/NavNarrow';
 import NavItem from './NavItem/NavItem';
+import NavScroll from './NavScroll/NavScroll';
 import './nav.css';
 
 export default class Nav extends React.Component {
@@ -11,7 +12,9 @@ export default class Nav extends React.Component {
     this.state = {
       isWideScreen: false,
       isDropdownOpen: false,
+      isScroll: false,
       windowLocation: '',
+      addClass: false,
       menuItems: [
         {
           text: 'About',
@@ -39,6 +42,7 @@ export default class Nav extends React.Component {
     this.closeDropdown = this.closeDropdown.bind(this);
     this.scrollToWindowPosition = this.scrollToWindowPosition.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   toggleDropdown() {
@@ -74,13 +78,37 @@ export default class Nav extends React.Component {
       }
     }
   }
+  // toggle() {
+  //    this.setState({ addClass: false });
+  // }
+  handleScroll() {
+    console.log('Scrolled'); //check if working
+    // this.setState((prevState) => {
+    //   return { addClass: !prevState.addClass }
+    // });
+    //scrolls past the banner section to initiate navbar change, around 700px past top of page
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+      this.setState(prevState => ({
+        addClass: true,
+      }));
+      // console.log('check');
+    }
+    else {
+      this.setState(prevState => ({
+        addClass: false,
+      }));
+    }
+  }
+
 
   componentWillMount() {
     this.handleResize();
+    this.handleScroll();
   }
-
+  
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentDidUpdate(prevState) {
@@ -104,22 +132,36 @@ export default class Nav extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
+    // let addClassScroll = (this.state.addClass ? 'navbar-item' : 'navbar-item-scroll');
+
     return (
       <nav>
         {(() => {
-          if (this.state.isWideScreen) {
+          if (this.state.isWideScreen && this.state.addClass) {
             return (
               <NavWide>
                 {this.state.menuItems.map(item =>
-                  <li key={item.text} className='navbar-item'>
+                  <li key={item.text} className='navbar-item'/*className={addClassScroll} onScroll={this.handleScroll}*/>
                   <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
                   </li>)
                 }
               </NavWide>);
           }
+          // if (this.state.isWideScreen && this.state.addClass) {
+          //   console.log('ran');
+          //   return (
+          //     <NavScroll>
+          //       {this.state.menuItems.map(item =>
+          //         <li key={item.text} className='navbar-item'/*className={addClassScroll} onScroll={this.handleScroll}*/>
+          //         <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
+          //         </li>)
+          //       }
+          //     </NavScroll>);
+          // }
           return (
             <NavNarrow toggle={this.toggleDropdown}
             isOpen={this.state.isDropdownOpen}>

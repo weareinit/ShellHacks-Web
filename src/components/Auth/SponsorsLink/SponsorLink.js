@@ -6,3 +6,4 @@ const SponsorLink = () => (
 );
 
 export default SponsorLink;
+
