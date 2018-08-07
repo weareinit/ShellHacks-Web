@@ -26,96 +26,111 @@ const settings = {
       eventsFriday: [
         {
           id : 1,
-          title : "Event 1",
-          time: '11:00',
-          description: "Event Description"
+          title : "React Js Workshop",
+          time: '11-12 Pm',
+          location: 'PG6 Lobby',
+          description: "Learn how to Code in React js web development"
         },
         {
           id : 2,
-          title : "Event 2",
-          time: '11:00',
-          description: "Event Description"
+          title : "Check- In",
+          time: '10-11 Pm',
+          location: 'PG6 Lobby',
+          description: "Check in with us and get your badge"
         },
         {
           id : 3,
           title : "Event 3",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         },
         {
           id : 4,
           title : "Event 4",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         },
         {
           id : 5,
           title : "Event 5",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         }
       ],
       eventsSaturday: [
         {
           id : 1,
-          title : "Event 1",
-          time: '11:00',
-          description: "Event Description"
+          title : "React Js Workshop",
+          time: '11-12 Pm',
+          location: 'PG6 Lobby',
+          description: "Learn how to Code in React js web development"
         },
         {
           id : 2,
-          title : "Event 2",
-          time: '11:00',
-          description: "Event Description"
+          title : "Check- In",
+          time: '10-11 Pm',
+          location: 'PG6 Lobby',
+          description: "Check in with us and get your badge"
         },
         {
           id : 3,
           title : "Event 3",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         },
         {
           id : 4,
           title : "Event 4",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         },
         {
           id : 5,
           title : "Event 5",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         }
       ],
       eventsSunday: [
         {
           id : 1,
-          title : "Event 1",
-          time: '11:00',
-          description: "Event Description"
+          title : "React Js Workshop",
+          time: '11-12 Pm',
+          location: 'PG6 Lobby',
+          description: "Learn how to Code in React js web development"
         },
         {
           id : 2,
-          title : "Event 2",
-          time: '11:00',
-          description: "Event Description"
+          title : "Check- In",
+          time: '10-11 Pm',
+          location: 'PG6 Lobby',
+          description: "Check in with us and get your badge"
         },
         {
           id : 3,
           title : "Event 3",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         },
         {
           id : 4,
           title : "Event 4",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         },
         {
           id : 5,
           title : "Event 5",
           time: '11:00',
+          location: 'PG6 Lobby',
           description: "Event Description"
         }
       ],

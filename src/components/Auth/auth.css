@@ -3,7 +3,7 @@
     min-height: 100vh;
     min-width: 100%;
     flex-direction: column;
-    background-color: #76f3f1;
+    background-color: var(--blue-primary);
     color: white;
   }
   
@@ -18,7 +18,7 @@
       align-items: center;
       background-color: white;
       margin: auto;
-      border: 3px solid #ff9ee5;
+      border: 5px solid #ff1493;
       padding: 10px;
       max-width: 500px;
       width: calc(100vw - 40px);
@@ -28,7 +28,7 @@
       text-align: center;
     font-size: 50px;
     padding: .5em;
-    color: black;
+    color: white;
   }
   
   .container-content  .password{
@@ -54,6 +54,10 @@
 
   h2{
       color: black;
+  }
+
+  h1{
+      color: white;
   }
   .btn{
     box-shadow: 0 1px #666;

@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
   let textStyle = {
       color: 'white',
       margin: 5,
+      'background-color': 'var(--blue-primary)',
   }
 
   let textStyleInfo = {
@@ -16,10 +17,9 @@ import Button from '@material-ui/core/Button';
   }
 
   let textStyleTitle = {
-     'margin-left' : 20,
-    width: 150,
+     'margin-top':0 ,
+    width: 200,
     'background-color': 'var(--blue-primary)',
-    'border-radius' : 5,
     'text-align' : 'center',
 }
 
@@ -33,6 +33,7 @@ import Button from '@material-ui/core/Button';
   
   let modalTextStyle = {
       color: 'white',
+      
   }
 
   let boxStyle = {
@@ -103,6 +104,7 @@ class ScheduleObject extends Component {
             <div style = {boxStyle}>
               <h2 style = {textStyleTitle} onClick = {this.test}> {this.props.title}</h2> 
               <p style = {textStyleInfo}> {this.props.time} </p>
+              <p style = {textStyleInfo}> {this.props.location} </p>
         <Button style = {textStyle}onClick={this.handleOpen}>More Info</Button>
         <Modal
           aria-labelledby="simple-modal-title"
@@ -115,6 +117,7 @@ class ScheduleObject extends Component {
               {this.props.title}
             </h2>
             <h4 style= {modalTextStyle}>{this.props.time} </h4>
+            <h4 style= {modalTextStyle}>{this.props.location} </h4>
             <p style= {modalTextStyle}> {this.props.description} </p>
             
           </div>

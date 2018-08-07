@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 /* eslint-disable */
+
+import '../component.css'
 class Myprofile extends Component {
   constructor() {
     super();
