@@ -1,3 +1,10 @@
+html,body{
+  /* height: 100%;
+    margin: 0px;
+    padding: 0px; */
+    overflow-x: hidden; 
+}
+
 nav {
   grid-area: nav;
   z-index: 100;
@@ -5,7 +12,8 @@ nav {
   height: 4em;
   display: flex;
   position: fixed;
-  width: 100%;
+  width: 100vw;
+ 
 }
 
 nav ul {

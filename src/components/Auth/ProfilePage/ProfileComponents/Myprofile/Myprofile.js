@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 /* eslint-disable */
 
+let containerStyle = {
+  'max-width' :'100%',
+}
+
+
 import '../component.css'
 class Myprofile extends Component {
   constructor() {
@@ -14,7 +19,7 @@ class Myprofile extends Component {
 /* eslint-disable */
   render() {
     return (
-<div>
+<div className = "outer">
   <h3> My Profile </h3><br/>
   <h4> Personal Info </h4>
   <input type="text" value="First Name" readonly />

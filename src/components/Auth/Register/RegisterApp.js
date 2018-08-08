@@ -9,7 +9,9 @@ const RegisterApp = () => (
   <div className='container'>
     <Nav />
     <div className='animated fadeIn container-content'>
+    <br /> <br /> <br />
       <h1 className='register-header'>Register</h1>
+      <br />
       <form method='post'>
       <h2>Enter Email </h2>
         <input className="password" type='email' />

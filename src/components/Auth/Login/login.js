@@ -8,6 +8,7 @@ export default function login() {
   <div className='container'>
     <Nav />
     <div className='animated fadeIn container-content'>
+    <br /> <br /> <br />
     <h1> Login </h1><br />
       <form>
         <h2> Email </h2>

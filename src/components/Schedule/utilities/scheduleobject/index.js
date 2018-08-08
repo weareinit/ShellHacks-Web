@@ -40,6 +40,7 @@ import Button from '@material-ui/core/Button';
       backgroundColor: "#ff1493",
       width: 200,
       margin : 20,
+      'margin-left': 40, 
       display: 'inline-block',
       'border-radius' : 5,  
      'box-shadow' : '5px 5px #000000',
