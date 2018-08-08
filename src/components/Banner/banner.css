@@ -1,6 +1,4 @@
 .banner {
-  background: linear-gradient(transparent 98%, 	var(--blue-primary)), url('../../assets/Miami_Beach_Gradient_Swoosh.png') center;
-  background-size: cover;
   grid-area: banner;
   height: 700px;
   display: flex;
@@ -26,24 +24,47 @@
 
 .banner-text p{
   font-size: 14pt;
+  text-align:center;
+}
+
+.date{
+  font-weight: bold;
 }
 
 .banner-text button{
+<<<<<<< HEAD
   font-size: 17px;
   background-color: #ff1493;
   margin-bottom: 20px;
   border-radius: 5px;
   border-color: rgba(0,0,0,.5);
   margin-left: 10px;
+=======
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ff1493; 
+>>>>>>> master
   color: white;
-  box-shadow: 0 1px #999;
+  display: inline-block;
+  border: none;
+  margin-right: 5px;
+  margin-left: 10px;
+  border-radius: 2px;
+  height:50px;
+  width: 250px;
+  font-size: 20px;
 }
 
 .banner-text button:hover{
-  background-color:var(--blue-primary-light);
+  transition: 0.2s ease;
+  background-color: rgb(48, 40, 148);
+  
 }
 
-.banner-text button:active {
-  box-shadow: 0 1px #666;
-  transform: translateY(4px);
+.banner-buttons {
+  text-align: center;
 }

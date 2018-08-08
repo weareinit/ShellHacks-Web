@@ -10,15 +10,15 @@ import Login from '../Auth/Login/login';
 import Schedule from '../Schedule/Schedule';
 import Sponsors from '../Sponsors/Sponsors';
 import Faq from '../Faq/Faq';
-import Profile from '../../ProfilePage/profile';
+import Dashboard from '../Auth/ProfilePage/profile';
 
 import './app.css';
 
 const MainApp = () => (
   <div className='app'>
     <Nav />
-    <Banner />
     <div className='bg1'>
+    <Banner />
     <About />
     <Schedule />
     </div>
@@ -28,12 +28,15 @@ const MainApp = () => (
   </div>
 );
 
+// hold state to know if there is an active user session
 const App = () => (
   <Router>
     <Switch>
       <Route exact path='/' component={MainApp}></Route>
       <Route path='/register' component={RegisterApp}></Route>
       <Route path='/login' component={Login}></Route>
+      <Route path='/dashboard' component={Dashboard}></Route>
+      <Route path='/sponsors' component={Sponsors}></Route>
     </Switch>
   </Router>
 );

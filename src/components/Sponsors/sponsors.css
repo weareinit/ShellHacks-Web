@@ -1,23 +1,40 @@
 .sponsors-container {
-    grid-area: sponsors;
-    display: grid;
-    margin-top: -7px;
-    grid-template-columns: var(--container-columns-small);
-    grid-template-rows: 1fr;
-    min-height: 1500px;
-    background: url('../../assets/Gradient_2.png');
-    background-size: contain;
+  grid-area: sponsors;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: var(--container-columns-small);
+  grid-template-rows: 1fr;
+  min-height: 1700px;
+  background: url('../../assets/Gradient_2.png');
+  background-size: cover;
 }
 
 .sponsors-content {
-    grid-column: 2 / 3;
+  grid-column: 2 / 3;
 }
 
-@media only screen and (min-width: 1044px) {
-    .sponsors-container {
-        grid-template-columns: var(--container-columns-large);
-    }
-    .sponsors-content {
-        grid-column: 3 / 4;
-    }
+.sponsors-content p {
+  margin: 0 auto 0 auto;
+}
+
+@media only screen and (min-width: 840px) {
+  .sponsors-container {
+    grid-template-columns: var(--container-columns-medium);
+    background-size: 100% 100%;
+  }
+  .sponsors-content {
+    grid-column: 3 / 4;
+  }
+  .sponsors-content p {
+    min-width: var(--medium-inner-width);
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .sponsors-container {
+    grid-template-columns: var(--container-columns-large);
+  }
+  .sponsors-content p {
+    min-width: var(--large-inner-width);
+  }
 }
