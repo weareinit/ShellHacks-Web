@@ -31,14 +31,16 @@
   font-size: 14pt;
   line-height: 3.2em;
   font-family: 'Kanit', sans-serif;
+  
+}
+
+.navbar-item a {
+  color: white;
 }
 
 .navbar-item:hover{
-  border-top: 3px solid #ffffff;
-  border-bottom: 3px solid #ffffff;
-  margin-top: 3px;
-  margin-bottom: 4px;
-  transition: 0.2s ease;
+  background-color:  var(--blue-primary);
+  transition: 0.8s ease;
 }
 
 .mlh{
