@@ -1,17 +1,22 @@
+body{
+	background-color: var(--blue-primary);
+}
+
 .main{
 
-	border-radius: 5px;
+	border-radius: 7px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: white;
 	margin: auto;
-    border: 10px solid #ff1493;
+    border: 5px solid #ff1493;
     padding: 10px;
     max-width: 500px;
     width: calc(100vw - 40px);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 7px #000000;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	display: flex;
 	
 }
@@ -24,12 +29,22 @@ input{
 	max-width: 100%;
 }
 .switch{
-	display: inline-block;
+	display: flex;
+	margin-bottom: 10px; 
 }
-.change{
-	margin-left: 30px;
+
+.switch button{
+	color: black;
+	border-radius: 10px; 
+	margin-right: 20px;
+	margin-bottom: 10px;
+    width: 30%;
+	text-align: center;
+	box-shadow: 4px 4px #000000;
+	font-size: 15px;
+	margin-left: 20px;
 	background-color: rgb(221,221,221);
-	margin-bottom: 20px;
+	
 	border-radius: 5px;
 	border-color: rgba(0,0,0,.5);
 }
