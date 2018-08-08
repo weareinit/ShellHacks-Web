@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import React from 'react';
 
 import NavItem from '../NavItem/NavItem';
@@ -6,7 +7,12 @@ import './navWide.css';
 // added images to work with here
 const NavWide = props =>
     <div className='navbar-container'>
-      <Link to='/' className="logo"></Link>
+      {(() => {
+        if (window.location.pathname === '/') {
+          return <HashLink to='/#home' className="logo"></HashLink>;
+        }
+        return <Link to='/' className="logo"></Link>;
+      })()}
       <ul className="navbar-items">
         {props.children}
       </ul>

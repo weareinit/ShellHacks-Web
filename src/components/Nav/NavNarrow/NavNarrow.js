@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import NavItem from '../NavItem/NavItem';
 
@@ -12,11 +14,15 @@ const NavNarrow = props =>
       if (props.isOpen) {
         return (
         <div className='dropdown'>
+          {(() => {
+            if (window.location.pathname === '/') {
+              return <HashLink to='/#home' className="logo"></HashLink>;
+            }
+            return <Link to='/' className="logo"></Link>;
+          })()}
           <div className='dropdown-items'>
           {props.children}
           </div>
-          {/* <button className='menu-close-button'>X</button>
-          added font awesome close button */}
           <i className="far fa-window-close fa-3x menu-close-button"></i>
         </div>);
       }

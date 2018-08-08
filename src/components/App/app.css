@@ -1,12 +1,11 @@
 html,body {
-	margin:0;
+	margin: 0;
 	padding: 0;
 }
 
 .app {
   display: grid;
   min-height: 100vh;
-  min-width: 100%;
   color: white;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
@@ -21,9 +20,16 @@ html,body {
 }
 
 .bg1 {
-  grid-row-start: 3;
-  background: url('../../assets/Gradient_1.png');
-  background-size: contain;
+  grid-row-start: 2;
+  background: url('../../assets/Miami_Beach_Gradient_Swoosh.png');
+  background-size: cover;
+  padding-bottom: 230px;
+}
+
+@media only screen and (min-width: 840px) {
+  .bg1 {
+    background-size: 100% 100%;
+  }
 }
 
 :root {
@@ -31,7 +37,13 @@ html,body {
   --blue-primary-light: rgb(48, 40, 148);
   --blue-secondary: rgb(120, 118, 233);
   --pink-primary: rgb(256, 30, 142);
-  --base-gutter-size: 10px;
+  --base-gutter-size: 20px;
+
   --container-columns-small: var(--base-gutter-size) 1fr var(--base-gutter-size);
-  --container-columns-large: var(--base-gutter-size) 1fr 1024px 1fr var(--base-gutter-size);
+
+  --medium-inner-width: 800px;
+  --container-columns-medium: var(--base-gutter-size) 1fr var(--medium-inner-width) 1fr var(--base-gutter-size);
+
+  --large-inner-width: 1100px;
+  --container-columns-large: var(--base-gutter-size) 1fr var(--large-inner-width) 1fr var(--base-gutter-size);
 }

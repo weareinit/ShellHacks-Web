@@ -1,25 +1,32 @@
 .schedule-container{
 	margin-left: 10px;
   grid-area: schedule;
-	display: grid;
+  display: grid;
+  width: 100vw;
 	grid-template-columns: var(--container-columns-small);
 	grid-template-rows: 1fr;
 	
 }
 
 .schedule-content {
-	grid-column: 1 / 3;
-	
+  grid-column: 1 / 3;
+  padding: 0 26px 0 26px;
 }
 
-@media only screen and (min-width: 1044px) {
+@media only screen and (min-width: 840px) {
+  .schedule-container {
+    grid-template-columns: var(--container-columns-medium);
+  }
+  .schedule-content {
+    grid-column: 3 / 4;
+    flex-direction: row;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
 	.schedule-container {
 		grid-template-columns: var(--container-columns-large);
-		
-	}
-
-	.schedule-content {
-		grid-column: 3 / 4;
 		
 	}
 }

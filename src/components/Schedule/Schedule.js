@@ -139,7 +139,7 @@ const settings = {
 
   render(){
     return (
-      <div className='schedule-container'>
+      <div className='schedule-container'  id='schedule'>
           <div className='schedule-content'>
           <h1> Schedule </h1>
   
