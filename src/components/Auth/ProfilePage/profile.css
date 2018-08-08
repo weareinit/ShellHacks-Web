@@ -6,16 +6,22 @@
 	align-items: center;
 	background-color: white;
 	margin: auto;
-    border: 3px solid #ff9ee5;
+    border: 10px solid #ff1493;
     padding: 10px;
     max-width: 500px;
     width: calc(100vw - 40px);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
-    margin-top: 20px;
+	margin-top: 20px;
+	display: flex;
+	
 }
 input{
-	background-color: lightgrey;
 	margin-bottom: 15px;
+	margin: 5px;
+	width: 300px;
+	border: none;
+	border-bottom: .1em solid rgba(0, 0, 0, .75);
+	max-width: 100%;
 }
 .switch{
 	display: inline-block;

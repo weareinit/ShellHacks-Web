@@ -1,7 +1,8 @@
-import React from 'react';
+/* eslint-disable */
+import React, {Component} from 'react';
 import Slider from 'react-slick';
-
 import './schedule.css';
+import SchedueleObject from './utilities/scheduleobject';
 
 const settings = {
   dots: true,
@@ -9,58 +10,168 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  customPaging: function l(i) {
+    return (
+      <a>
+        <img width='20' height='20' src='/src/assets/ShellHacks_Logo_White@4x.png' />
+      </a>
+    );
+  },
 };
 
-export default function Schedule() {
-  return (
-    <div className='schedule-container' id='schedule'>
-        <div className='schedule-content'>
-        <h1> Schedule </h1>
+ class Schedule extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      eventsFriday: [
+        {
+          id : 1,
+          title : "React Js Workshop",
+          time: '11-12 Pm',
+          location: 'PG6 Lobby',
+          description: "Learn how to Code in React js web development"
+        },
+        {
+          id : 2,
+          title : "Check- In",
+          time: '10-11 Pm',
+          location: 'PG6 Lobby',
+          description: "Check in with us and get your badge"
+        },
+        {
+          id : 3,
+          title : "Event 3",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        },
+        {
+          id : 4,
+          title : "Event 4",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        },
+        {
+          id : 5,
+          title : "Event 5",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        }
+      ],
+      eventsSaturday: [
+        {
+          id : 1,
+          title : "React Js Workshop",
+          time: '11-12 Pm',
+          location: 'PG6 Lobby',
+          description: "Learn how to Code in React js web development"
+        },
+        {
+          id : 2,
+          title : "Check- In",
+          time: '10-11 Pm',
+          location: 'PG6 Lobby',
+          description: "Check in with us and get your badge"
+        },
+        {
+          id : 3,
+          title : "Event 3",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        },
+        {
+          id : 4,
+          title : "Event 4",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        },
+        {
+          id : 5,
+          title : "Event 5",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        }
+      ],
+      eventsSunday: [
+        {
+          id : 1,
+          title : "React Js Workshop",
+          time: '11-12 Pm',
+          location: 'PG6 Lobby',
+          description: "Learn how to Code in React js web development"
+        },
+        {
+          id : 2,
+          title : "Check- In",
+          time: '10-11 Pm',
+          location: 'PG6 Lobby',
+          description: "Check in with us and get your badge"
+        },
+        {
+          id : 3,
+          title : "Event 3",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        },
+        {
+          id : 4,
+          title : "Event 4",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        },
+        {
+          id : 5,
+          title : "Event 5",
+          time: '11:00',
+          location: 'PG6 Lobby',
+          description: "Event Description"
+        }
+      ],
+    }
+  }
 
-      <Slider {...settings}>
-        <div className="text">
-        <h2> Friday </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Cras auctor tempus metus, non dignissim enim blandit a. Aenean
-      sollicitudin turpis et enim vehicula eleifend. Sed non ipsum leo.
-      Quisque id lectus sed arcu bibendum tempus non sit amet augue.
-      Curabitur leo ante, lacinia vel lobortis ac, luctus vel neque.
-      Maecenas gravida sed felis eget eleifend. Duis sem orci, aliquet
-      at tortor quis, convallis suscipit erat. Quisque sed rutrum neque.
-      Phasellus eget nisi dignissim, dapibus arcu non, pulvinar est.
-      Donec tellus lacus, feugiat non ante id, elementum vehicula nisi.
-      Vestibulum magna orci, scelerisque id dapibus porta, varius ac odio.</p>
-        </div>
-        <div className="text">
-        <h2> Saturday </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Cras auctor tempus metus, non dignissim enim blandit a. Aenean
-      sollicitudin turpis et enim vehicula eleifend. Sed non ipsum leo.
-      Quisque id lectus sed arcu bibendum tempus non sit amet augue.
-      Curabitur leo ante, lacinia vel lobortis ac, luctus vel neque.
-      Maecenas gravida sed felis eget eleifend. Duis sem orci, aliquet
-      at tortor quis, convallis suscipit erat. Quisque sed rutrum neque.
-      Phasellus eget nisi dignissim, dapibus arcu non, pulvinar est.
-      Donec tellus lacus, feugiat non ante id, elementum vehicula nisi.
-      Vestibulum magna orci, scelerisque id dapibus porta, varius ac odio.</p>
-        </div>
-        <div className="text">
-        <h2> Sunday </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Cras auctor tempus metus, non dignissim enim blandit a. Aenean
-      sollicitudin turpis et enim vehicula eleifend. Sed non ipsum leo.
-      Quisque id lectus sed arcu bibendum tempus non sit amet augue.
-      Curabitur leo ante, lacinia vel lobortis ac, luctus vel neque.
-      Maecenas gravida sed felis eget eleifend. Duis sem orci, aliquet
-      at tortor quis, convallis suscipit erat. Quisque sed rutrum neque.
-      Phasellus eget nisi dignissim, dapibus arcu non, pulvinar est.
-      Donec tellus lacus, feugiat non ante id, elementum vehicula nisi.
-      Vestibulum magna orci, scelerisque id dapibus porta, varius ac odio.</p>
-        </div>
-      </Slider>
-      <br/>
-      <br/>
-    </div>
-    </div>
-  );
+  render(){
+    return (
+      <div className='schedule-container'  id='schedule'>
+          <div className='schedule-content'>
+          <h1> Schedule </h1>
+  
+        <Slider {...settings}>
+          <div className="text">
+          <div className = "day">
+          <h2 > Friday </h2>
+          </div>
+          {this.state.eventsFriday.map(qAndA => <SchedueleObject {...qAndA}
+      key={qAndA.id} />)}
+          </div>
+          <div className="text">
+          <div className = "day">
+          <h2> Saturday </h2>
+          </div>
+          {this.state.eventsSaturday.map(qAndA => <SchedueleObject {...qAndA}
+      key={qAndA.id} />)}
+          </div>
+          <div className="text">
+          <div className = "day">
+          <h2> Sunday </h2>
+          </div>
+          {this.state.eventsSunday.map(qAndA => <SchedueleObject {...qAndA}
+      key={qAndA.id} />)}
+          </div>
+        </Slider>
+        <br/>
+        <br/>
+      </div>
+      </div>
+    );
+  }
 }
+
+export default Schedule

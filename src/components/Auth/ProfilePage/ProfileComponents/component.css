@@ -1,0 +1,12 @@
+
+h2, h3, h4{
+    color: black;
+}
+
+.outer{
+ align-items: center;
+}
+
+.outer input{
+    max-width: 100vw;
+}

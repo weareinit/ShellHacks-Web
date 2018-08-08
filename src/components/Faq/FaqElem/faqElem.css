@@ -1,8 +1,11 @@
+
 .faq-elem {
+ 
   flex: 1 1 300px;
   background-color: var(--blue-primary);
   min-height: 200px;
   margin: 6px 6px;
+  box-shadow: 5px 7px #000000;
 }
 
 .faq-elem h3 {
@@ -17,4 +20,10 @@
 .faq-elem p {
   text-align: center;
   color: white;
+  padding: 10px;
+}
+
+.img{
+  float: right;
+  padding: 10px;
 }

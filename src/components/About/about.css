@@ -4,6 +4,7 @@
   width: 100vw;
 	grid-template-columns: var(--container-columns-small);
   padding: 15em 0 15em 0;
+  margin-top: 50px;
 }
 
 .about-content {
@@ -19,6 +20,7 @@
 
 .about-content p {
   font-size: 16pt;
+  
 }
 
 .about-image {
@@ -27,6 +29,7 @@
   background: url('../../assets/Filler_Circle.png') no-repeat;
   background-size: contain;
   margin: 0 auto 3em auto;
+
 }
 
 .about-text {
