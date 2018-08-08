@@ -44,7 +44,7 @@ export default class Faq extends React.Component {
 
   render() {
     return (
-    <div className='faq-container'>
+    <div className='faq-container' id='faq'>
       <div className='faq-content'>
       <h1>Frequently Asked Questions</h1>
       {this.state.questions.map(qAndA => <FaqElem {...qAndA}

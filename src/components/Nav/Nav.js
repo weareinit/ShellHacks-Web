@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LoginLink from '../Auth/Login/LoginLink';
+import RegisterLink from '../Auth/Register/RegisterLink';
 import NavWide from './NavWide/NavWide';
 import NavNarrow from './NavNarrow/NavNarrow';
 import NavItem from './NavItem/NavItem';
@@ -15,23 +17,19 @@ export default class Nav extends React.Component {
       menuItems: [
         {
           text: 'About',
-          link: 'about-section',
+          link: 'about',
         },
         {
           text: 'Schedule',
-          link: 'schedule-section',
+          link: 'schedule',
         },
         {
           text: 'FAQ',
-          link: '#',
+          link: 'faq',
         },
         {
           text: 'Sponsors',
-          link: 'sponsors-section',
-        },
-        {
-          text: 'Log In',
-          link: '#',
+          link: 'sponsors',
         },
       ],
     };
@@ -95,10 +93,8 @@ export default class Nav extends React.Component {
     }
     if (this.state.isDropdownOpen && !prevState.isDropdownOpen) {
       dropDown.addEventListener('click', this.closeDropdown, false);
-      dropDownItems.addEventListener('click', this.scrollToWindowPosition, true);
     } else if (!this.state.isDropdownOpen && prevState.isDropdownOpen) {
       dropDown.removeEventListener('click', this.closeDropdown);
-      dropDownItems.removeEventListener('click', this.scrollToWindowPosition);
     }
   }
 
@@ -115,18 +111,21 @@ export default class Nav extends React.Component {
               <NavWide>
                 {this.state.menuItems.map(item =>
                   <li key={item.text} className='navbar-item'>
-                  <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
+                  <NavItem {...item}/>
                   </li>)
                 }
+                <li className='navbar-item'><LoginLink></LoginLink></li>
+                <li className='navbar-item'><RegisterLink></RegisterLink></li>
               </NavWide>);
           }
           return (
             <NavNarrow toggle={this.toggleDropdown}
             isOpen={this.state.isDropdownOpen}>
               {this.state.menuItems.map(item =>
-                <NavItem linkClick={this.scrollToWindowPosition}
-                key={item.text} {...item}/>)
+                <NavItem key={item.text} {...item}/>)
               }
+              <LoginLink></LoginLink>
+              <RegisterLink></RegisterLink>
             </NavNarrow>);
         })()}
       </nav>
