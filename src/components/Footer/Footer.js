@@ -1,15 +1,11 @@
 import React from 'react';
 import shellhackstitle from './shellhackstitle.png';
 import shellhacksnewlogo from './shellhacksnewlogo.png';
-// imported image from assets Shellhacks Marketing folder
 import './footer.css';
-// added links to social media, font awesome icons used, 3x size
+
 export default function Footer() {
   return (
     <div className="footer">
-      <div>
-        <img className="resize" src={shellhacksnewlogo} />
-      </div>
       <div className="two">
         <a href="https://2017.shellhacks.net/">
           <button className="b1">2017 Site</button>
