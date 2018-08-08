@@ -46,7 +46,8 @@
 }
 
 .two button:hover {
-  background-color: rgb(48, 40, 148);
+  background-color:  var(--blue-primary);
+  transition: .2s
 }
 
 /*allows responsive footer, could not place div .two container to next row when
