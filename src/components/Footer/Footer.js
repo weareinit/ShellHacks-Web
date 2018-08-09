@@ -7,6 +7,9 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="two">
+        <a href="https://2017.shellhacks.net/">
+          <button className="b1">2017 Site</button>
+        </a>
         <a href="https://imgur.com/a/CuJRC">
           <button>Wallpapers</button>
         </a>
