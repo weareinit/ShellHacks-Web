@@ -8,20 +8,39 @@ import SponsorLink from '../Sponsors/SponsorsLink/SponsorLink';
 
 import './banner.css';
 
-export default function Banner() {
-  return (
-    <section className='banner' id='home'>
-    <div className='banner-text'>
-      <img src='/src/assets/ShellHacks_WordMark_White@4x.png'></img>
-      <p className="date">September 21, 2018 | Florida International University</p>
-      <p>FIU Miami, Florida</p>
-      <div className='banner-buttons'>
-        <button><Link to='/#sponsors'>Sponsors</Link></button>
-        <button><RegisterLink/></button>
-        <button><LoginLink/></button>
-        <button><ProfileLink /></button>
+export default class Banner extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoggedIn: false,
+    };
+  }
+
+  render() {
+    return (
+      <section className='banner' id='home'>
+      <div className='banner-text'>
+        <img src='/src/assets/ShellHacks_WordMark_White@4x.png'></img>
+        <p className="date">September 21, 2018 | Florida International University</p>
+        <p>FIU Miami, Florida</p>
+          {(() => {
+            if (this.state.isLoggedIn) {
+              return (
+                <div className='banner-buttons'>
+                <button><Link to='/#sponsors'>Sponsors</Link></button>
+                <button><ProfileLink /></button>
+                </div>
+              );
+            }
+            return (
+              <div className='banner-buttons'>
+              <button><Link to='/#sponsors'>Sponsors</Link></button>
+              <button><RegisterLink/></button>
+              <button><LoginLink/></button>
+              </div>);
+          })()}
       </div>
-    </div>
-    </section>
-  );
+      </section>
+    );
+  }
 }
