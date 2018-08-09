@@ -40,6 +40,18 @@ class Myprofile extends Component {
   <input type="text" value="Junior" readonly />
   <h4> Expected Graduation Year </h4>
   <input type="text" value="2020" readonly />
+  <h4> Shirt Size </h4>
+  <input type="text" value="M" readonly />
+  <h4> First Hackathon </h4>
+  <input type="text" value="No" readonly />
+  <h4> Dietary Restrictions</h4>
+  <input type="text" value="N/A" readonly />
+  <h4> Additional Diet Info</h4>
+  <input type="text" value="" readonly />
+  <h4> LinkedIn Url</h4>
+  <input type="text" value="" readonly />
+  <h4> GitHub Url</h4>
+  <input type="text" value="" readonly />
   
 </div>
     );

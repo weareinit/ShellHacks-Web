@@ -48,7 +48,7 @@
 
 .banner-text button:hover{
   transition: 0.2s ease;
-  background-color: rgb(48, 40, 148);
+  background-color:  var(--blue-primary);
 }
 
 .banner-buttons {  /* make height responsive */
