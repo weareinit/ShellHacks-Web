@@ -43,6 +43,9 @@
 	box-shadow: 4px 5px #000000;
 }
 
+.schedule-content h1{
+	text-align: center;
+}
 .text{
 	grid-column: 2 / 3;
 	display: flex;

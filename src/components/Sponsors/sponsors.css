@@ -7,6 +7,9 @@
   min-height: 1700px;
   background: url('../../assets/Gradient_2.png');
   background-size: cover;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
 .sponsors-content {
@@ -37,4 +40,48 @@
   .sponsors-content p {
     min-width: var(--large-inner-width);
   }
+}
+
+.sponsors-content {
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 50px; 
+
+}
+
+.sponsors-content h1{
+  text-align: left;
+}
+.sponsors-content img{
+  margin: 20px; 
+   flex: 1 1;
+}
+
+.conch{
+  
+  max-width: 90%;
+  max-height: auto;
+}
+
+.cone{
+  max-width: 70%;
+  max-height:  70%;
+}
+
+.scallop{
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.sand-dollar{
+  max-width: 30%;
+  max-height: 30%;
+}
+
+.partner{
+  max-width: 15%;
+  max-height: 15%;
 }
