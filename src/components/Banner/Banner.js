@@ -21,8 +21,10 @@ export default class Banner extends React.Component {
       <section className='banner' id='home'>
       <div className='banner-text'>
         <img src='/src/assets/ShellHacks_WordMark_White@4x.png'></img>
+        <div class='banner-info'>
         <p className="date">September 21, 2018 | Florida International University</p>
         <p>FIU Miami, Florida</p>
+        </div>
           {(() => {
             if (this.state.isLoggedIn) {
               return (
