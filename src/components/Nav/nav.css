@@ -9,7 +9,7 @@ nav {
   grid-area: nav;
   z-index: 100;
   background-color: var(--pink-primary);
-  height: 4em;
+  height: var(--nav-height);
   display: flex;
   position: fixed;
   width: 100vw;

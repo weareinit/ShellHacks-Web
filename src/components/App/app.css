@@ -40,6 +40,9 @@ html,body {
   --blue-primary-light: rgb(48, 40, 148);
   --blue-secondary: rgb(120, 118, 233);
   --pink-primary: rgb(256, 30, 142);
+  
+  --nav-height: 4em;
+
   --base-gutter-size: 20px;
 
   --container-columns-small: var(--base-gutter-size) 1fr var(--base-gutter-size);
