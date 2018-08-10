@@ -1,11 +1,11 @@
-.banner {  /* make width and height responsive */
+.banner {
   grid-area: banner;
   height: 700px;
   display: flex;
   max-width: 100vw;
 }
 
-.banner-text {  /* make width and height responsive */
+.banner-text {
   --padding-offset: 40px;
   padding-top: calc(var(--nav-height) + var(--padding-offset));
   display: flex;
