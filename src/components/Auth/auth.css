@@ -27,7 +27,7 @@
   }
   .container-content h1{
       text-align: center;
-    font-size: 50px;
+    font-size: 35px;
     padding: .5em;
     color: white;
   }
@@ -76,4 +76,9 @@
   .btn:active {
     box-shadow: 0 1px #666;
     transform: translateY(4px);
+  }
+
+  .select{
+    width: 280px;
+    color: black;
   }
