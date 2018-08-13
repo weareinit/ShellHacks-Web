@@ -4,7 +4,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import LoginLink from '../Auth/Login/LoginLink';
 import RegisterLink from '../Auth/Register/RegisterLink';
 import ProfileLink from '../Auth/ProfilePage/ProfileLink';
-import SponsorLink from '../Sponsors/SponsorsLink/SponsorLink';
 
 import './banner.css';
 
