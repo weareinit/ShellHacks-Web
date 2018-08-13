@@ -7,17 +7,17 @@ import ProfileLink from '../Auth/ProfilePage/ProfileLink';
 
 import './banner.css';
 
-const Banner = () => (
+const Banner = props => (
   <section className='banner' id='home'>
     <div className='banner-text'>
-    <button onClick={this.props.logIn}>test button</button>
+    <button onClick={props.logIn}>test button</button>
     <img src='/src/assets/ShellHacks_WordMark_White@4x.png'></img>
     <div className='banner-info'>
       <p className="date">September 21, 2018 | Florida International University</p>
       <p>FIU Miami, Florida</p>
     </div>
     {(() => {
-      if (this.props.isLoggedIn) {
+      if (props.isLoggedIn) {
         return (
           <div className='banner-buttons'>
             <button><Link to='/#sponsors'>Sponsors</Link></button>
