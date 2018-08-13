@@ -14,11 +14,11 @@ import Dashboard from '../Auth/ProfilePage/profile';
 
 import './app.css';
 
-const MainApp = () => (
+const MainApp = props => (
   <div className='app'>
     <Nav />
     <div className='bg1'>
-    <Banner />
+    <Banner isLoggedIn={props.isLoggedIn} logIn={props.logInFunc}/>
     <About />
     <Schedule />
     </div>
@@ -29,16 +29,54 @@ const MainApp = () => (
 );
 
 // hold state to know if there is an active user session
-const App = () => (
-  <Router>
-    <Switch>
-      <Route exact path='/' component={MainApp}></Route>
-      <Route path='/register' component={RegisterApp}></Route>
-      <Route path='/login' component={Login}></Route>
-      <Route path='/dashboard' component={Dashboard}></Route>
-      <Route path='/sponsors' component={Sponsors}></Route>
-    </Switch>
-  </Router>
-);
+/*eslint-disable */
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoggedIn: false,
+    }
 
-export default App;
+    this.logIn = this.logIn.bind(this);
+    this.hydrateStateWithLocalStorage = this.hydrateStateWithLocalStorage.bind(this);
+  }
+  
+  /*eslint-disable */
+  hydrateStateWithLocalStorage() {
+    for (let key in Object.keys(this.state)) {
+      if (localStorage.hasOwnProperty(key)) {
+        let value = localStorage.getItem(key);
+        try {
+          value = JSON.parse(value);
+          this.setState({[key]: value});
+        } catch(e) {
+          this.setState({[key]: value});
+        }
+      }
+    }
+  }
+
+  logIn() {
+    console.log("clicked!");
+    this.setState({ isLoggedIn: true });
+    localStorage.setItem('jwt', 'token-string');
+  }
+
+  componentDidMount() {
+    this.hydrateStateWithLocalStorage();
+  }
+
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route exact path='/' render={routeProps => <MainApp {...routeProps} isLoggedIn={this.state.isLoggedIn} logInFunc={this.logIn} />}></Route>
+          <Route path='/register' component={RegisterApp}></Route>
+          <Route path='/login' component={Login}></Route>
+          <Route path='/dashboard' component={Dashboard}></Route>
+          <Route path='/sponsors' component={Sponsors}></Route>
+        </Switch>
+      </Router>
+    );
+  }
+}

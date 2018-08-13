@@ -8,41 +8,33 @@ import SponsorLink from '../Sponsors/SponsorsLink/SponsorLink';
 
 import './banner.css';
 
-export default class Banner extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoggedIn: false,
-    };
-  }
+const Banner = () => (
+  <section className='banner' id='home'>
+    <div className='banner-text'>
+    <button onClick={this.props.logIn}>test button</button>
+    <img src='/src/assets/ShellHacks_WordMark_White@4x.png'></img>
+    <div className='banner-info'>
+      <p className="date">September 21, 2018 | Florida International University</p>
+      <p>FIU Miami, Florida</p>
+    </div>
+    {(() => {
+      if (this.props.isLoggedIn) {
+        return (
+          <div className='banner-buttons'>
+            <button><Link to='/#sponsors'>Sponsors</Link></button>
+            <button><ProfileLink /></button>
+          </div>
+        );
+      }
+      return (
+        <div className='banner-buttons'>
+          <button><Link to='/#sponsors'>Sponsors</Link></button>
+          <button><RegisterLink/></button>
+          <button><LoginLink/></button>
+        </div>);
+      })()}
+    </div>
+  </section>
+);
 
-  render() {
-    return (
-      <section className='banner' id='home'>
-      <div className='banner-text'>
-        <img src='/src/assets/ShellHacks_WordMark_White@4x.png'></img>
-        <div class='banner-info'>
-        <p className="date">September 21, 2018 | Florida International University</p>
-        <p>FIU Miami, Florida</p>
-        </div>
-          {(() => {
-            if (this.state.isLoggedIn) {
-              return (
-                <div className='banner-buttons'>
-                <button><Link to='/#sponsors'>Sponsors</Link></button>
-                <button><ProfileLink /></button>
-                </div>
-              );
-            }
-            return (
-              <div className='banner-buttons'>
-              <button><Link to='/#sponsors'>Sponsors</Link></button>
-              <button><RegisterLink/></button>
-              <button><LoginLink/></button>
-              </div>);
-          })()}
-      </div>
-      </section>
-    );
-  }
-}
+export default Banner;
