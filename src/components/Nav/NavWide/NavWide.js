@@ -4,6 +4,28 @@ import React from 'react';
 import NavItem from '../NavItem/NavItem';
 import './navWide.css';
 // added images to work with here
+class NavScroll extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      addClass: false,
+    }
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentWillMount() {
+    this.handleScroll();
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+}
+
 const NavWide = props =>
     <div className='navbar-container'>
       <Link to='/' className="logo"></Link>

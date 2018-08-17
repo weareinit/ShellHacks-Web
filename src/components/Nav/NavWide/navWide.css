@@ -54,7 +54,19 @@
 
 .nav-item-scroll {
   color: red;
-  font-family: Arial;
-  background-color: white;
-  
+  background-color: red;
+  width: 5em;
+  text-align: center;
+  font-size: 14pt;
+  line-height: 3.2em;
+  font-family: 'Kanit', sans-serif;
+}
+
+.navbar-item-scroll:hover{
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  transition: 0.2s ease;
+  color: red;
 }

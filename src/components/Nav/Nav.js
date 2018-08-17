@@ -136,12 +136,24 @@ export default class Nav extends React.Component {
   }
 
   render() {
-    // let addClassScroll = (this.state.addClass ? 'navbar-item' : 'navbar-item-scroll');
+    //let addClassScroll = (this.state.addClass ? 'navbar-item-scroll' : 'navbar-item');
 
     return (
       <nav>
         {(() => {
           if (this.state.isWideScreen && this.state.addClass) {
+            console.log('ran');
+            return (
+              <NavScroll>
+                {this.state.menuItems.map(item =>
+                  <li key={item.text} className='navbar-item1'/*className={addClassScroll} onScroll={this.handleScroll}*/>
+                  <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
+                  </li>)
+                }
+              </NavScroll>);
+          }
+
+          else if (this.state.isWideScreen) {
             return (
               <NavWide>
                 {this.state.menuItems.map(item =>
@@ -151,17 +163,8 @@ export default class Nav extends React.Component {
                 }
               </NavWide>);
           }
-          // if (this.state.isWideScreen && this.state.addClass) {
-          //   console.log('ran');
-          //   return (
-          //     <NavScroll>
-          //       {this.state.menuItems.map(item =>
-          //         <li key={item.text} className='navbar-item'/*className={addClassScroll} onScroll={this.handleScroll}*/>
-          //         <NavItem linkClick={this.scrollToWindowPosition} {...item}/>
-          //         </li>)
-          //       }
-          //     </NavScroll>);
-          // }
+          //test out implementation using new component NavScroll
+          
           return (
             <NavNarrow toggle={this.toggleDropdown}
             isOpen={this.state.isDropdownOpen}>

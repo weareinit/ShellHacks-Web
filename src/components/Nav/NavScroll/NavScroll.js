@@ -8,7 +8,7 @@ import './navScroll.css';
 const NavScroll = props =>
     <div className='navbar-container1'>
       <Link to='/' className="logo"></Link>
-      <ul className="navbar-items">
+      <ul className="navbar-items1">
         {props.children}
       </ul>
       <a className="mlh" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=blue">
